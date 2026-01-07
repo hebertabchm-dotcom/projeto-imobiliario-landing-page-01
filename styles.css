@@ -366,6 +366,10 @@ select {
   width: 100%;
   padding-right: 48px;
 }
+/* make select backgrounds slightly more opaque for legibility on busy hero */
+.select-wrapper select {
+  background: rgba(255, 255, 255, 0.12);
+}
 .select-wrapper::after {
   content: "";
   position: absolute;
@@ -544,16 +548,36 @@ select:focus {
 .listing__img {
   display: block;
   width: 100%;
-  height: 210px;
+  height: 220px;
   overflow: hidden;
   background-size: cover;
   background-position: center;
+  position: relative;
+  border-radius: 12px 12px 0 0;
 }
 .listing__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform var(--dur3) var(--easeOut),
+    filter var(--dur2) var(--easeOut);
+  filter: brightness(0.92) contrast(0.98) saturate(0.95);
+}
+.listing__img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.02) 0%,
+    rgba(0, 0, 0, 0.06) 100%
+  );
+  pointer-events: none;
+}
+.card.listing:hover .listing__img img {
+  transform: scale(1.03);
+  filter: brightness(0.9) contrast(1.02) saturate(1);
 }
 .listing__body {
   padding: 16px;
@@ -568,6 +592,14 @@ select:focus {
   border: 1px solid rgba(253, 192, 84, 0.22);
   color: #fff;
   font-size: 0.85rem;
+}
+.section--light .badge {
+  background: rgba(249, 143, 52, 0.08);
+  border-color: rgba(249, 143, 52, 0.18);
+  color: var(--warm200);
+}
+.section--light .listing__body {
+  padding: 18px;
 }
 .price {
   font-size: 1.2rem;
