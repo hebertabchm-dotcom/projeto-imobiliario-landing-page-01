@@ -621,7 +621,7 @@ select:focus {
   border-radius: 999px;
   background: rgba(253, 192, 84, 0.12);
   border: 1px solid rgba(253, 192, 84, 0.22);
-  color: var(--surface);
+  color: var(--warm300);
   font-size: 0.85rem;
 }
 .section--light .badge {
@@ -636,12 +636,13 @@ select:focus {
   font-size: 1.2rem;
   font-weight: 800;
   margin: 10px 0 4px;
+  color: var(--warm300);
 }
 .meta {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  color: var(--muted);
+  color: var(--warm300);
   font-size: 0.9rem;
 }
 
