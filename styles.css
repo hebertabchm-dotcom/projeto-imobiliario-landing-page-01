@@ -995,3 +995,82 @@ select:focus {
   z-index: 9999;
 }
 
+/* =========================================================
+   Listing cards: bonito no DARK e no LIGHT (home)
+   Só afeta .listing (cards de imóveis)
+========================================================= */
+
+/* Tema padrão (página dark) */
+:root{
+  --listing-bg: rgba(255,255,255,0.06);
+  --listing-border: rgba(255,255,255,0.10);
+  --listing-title: rgba(255,255,255,0.94);
+  --listing-muted: rgba(255,255,255,0.72);
+  --listing-meta: rgba(255,255,255,0.78);
+  --listing-price: #ffffff;
+  --listing-shadow: 0 18px 55px rgba(0,0,0,0.45);
+}
+
+/* Quando o card estiver dentro da seção clara (Home) */
+.section--light{
+  --listing-bg: #ffffff;
+  --listing-border: rgba(0,0,0,0.08);
+  --listing-title: rgba(0,0,0,0.88);
+  --listing-muted: rgba(0,0,0,0.62);
+  --listing-meta: rgba(0,0,0,0.62);
+  --listing-price: #0f1115;
+  --listing-shadow: 0 18px 55px rgba(0,0,0,0.10);
+}
+
+/* Card base */
+.card.listing{
+  background: var(--listing-bg);
+  border: 1px solid var(--listing-border);
+  box-shadow: var(--listing-shadow);
+}
+
+/* Body do card */
+.listing__body{
+  padding: 18px;
+}
+
+.listing__body .badge{
+  margin-bottom: 10px;
+}
+
+/* Preço (corrige o seu problema do dark) */
+.price{
+  color: var(--listing-price);
+  font-size: 1.22rem;
+  font-weight: 850;
+  letter-spacing: -0.01em;
+  margin: 10px 0 6px;
+}
+
+/* Texto meta (local, quartos, m²) */
+.meta{
+  color: var(--listing-meta);
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+/* (Opcional) pequena linha separadora elegante */
+.listing__body .action-row{
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid color-mix(in srgb, var(--listing-border), transparent 35%);
+}
+
+/* Hover do card fica consistente nos 2 temas */
+.card.listing:hover{
+  border-color: color-mix(in srgb, var(--warm100), var(--listing-border) 55%);
+}
+
+/* Imagem: contraste melhor no dark e no light */
+.listing__img img{
+  filter: brightness(0.92) contrast(1.02) saturate(0.98);
+}
+.section--light .listing__img img{
+  filter: brightness(0.98) contrast(1.02) saturate(1);
+}
+
