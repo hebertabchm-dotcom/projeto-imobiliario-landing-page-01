@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fale Conosco — LuxPrime</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html"><span class="brand__mark"></span><span>LuxPrime</span></a>
+
+      <nav class="menu">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="imoveis.html">Imóveis</a>
+        <a data-nav href="sobre.html">Sobre nós</a>
+        <a data-nav href="contato.html">Fale Conosco</a>
+      </nav>
+
+      <div class="nav__right">
+        <a class="btn btn--cta" href="imoveis.html">Ver imóveis</a>
+        <button class="burger" id="burger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+
+    <div class="mobilePanel" id="mobilePanel">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="imoveis.html">Imóveis</a>
+      <a data-nav href="sobre.html">Sobre nós</a>
+      <a data-nav href="contato.html">Fale Conosco</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="reveal">
+        <div class="kicker">Contato</div>
+        <h1 class="sectionTitle">Fale com um especialista.</h1>
+        <p class="muted">Respostas rápidas, atendimento humano e curadoria alinhada ao seu perfil.</p>
+      </div>
+
+      <div class="grid2" style="margin-top:18px;">
+        <!-- Form -->
+        <div class="card feature reveal hover-lift">
+          <h3>Envie sua solicitação</h3>
+          <p class="muted">Preencha e retornamos em até 24h úteis.</p>
+
+          <form style="margin-top:12px; display:grid; gap:10px;">
+            <input class="input" placeholder="Seu nome" required>
+            <input class="input" placeholder="Seu WhatsApp" required>
+            <input class="input" placeholder="Seu e-mail" type="email">
+            <select>
+              <option>Objetivo</option>
+              <option>Comprar</option>
+              <option>Alugar</option>
+              <option>Investir</option>
+            </select>
+            <textarea class="input" placeholder="Conte o que você procura (bairro, quartos, faixa, prazo)" style="border-radius:18px; min-height:120px; padding:14px;"></textarea>
+            <button class="btn btn--cta" type="submit">Quero atendimento</button>
+
+            <p class="muted" style="margin:0;">
+              Ao enviar, você concorda em receber contato da LuxPrime.
+            </p>
+          </form>
+        </div>
+
+        <!-- Destaques -->
+        <div class="reveal">
+          <div class="grid2">
+            <div class="card feature hover-lift">
+              <div class="badge">⚡ Retorno rápido</div>
+              <h3>Atendimento em até 24h</h3>
+              <p class="muted">Se for urgente, você pode chamar no WhatsApp.</p>
+              <div style="margin-top:12px;">
+                <a class="btn btn--cta" href="#">Chamar no WhatsApp</a>
+              </div>
+            </div>
+
+            <div class="card feature hover-lift">
+              <div class="badge">🔒 Discrição</div>
+              <h3>Confidencialidade</h3>
+              <p class="muted">Tratamos dados e negociações com máxima discrição.</p>
+              <div style="margin-top:12px;">
+                <a class="btn" href="sobre.html">Entender como funciona</a>
+              </div>
+            </div>
+
+            <div class="card feature hover-lift">
+              <div class="badge">🎯 Curadoria</div>
+              <h3>Opções alinhadas</h3>
+              <p class="muted">Receba 3 opções reais dentro do seu perfil.</p>
+              <div style="margin-top:12px;">
+                <a class="btn btn--cta" href="imoveis.html">Ver catálogo</a>
+              </div>
+            </div>
+
+            <div class="card feature hover-lift">
+              <div class="badge">📍 Visitas</div>
+              <h3>Agendamento fácil</h3>
+              <p class="muted">Organizamos agenda e roteiro com antecedência.</p>
+              <div style="margin-top:12px;">
+                <a class="btn" href="contato.html">Agendar visita</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mapa / imagem / vídeo -->
+          <div class="media hover-lift" style="margin-top:18px;">
+            <!-- Troque por Google Maps embed ou vídeo institucional -->
+            <iframe
+              src="https://www.youtube.com/embed/ScMzIvxBSi4"
+              title="Mapa ou vídeo"
+              frameborder="0"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-top:22px;">
+        <div class="ctaBand card">
+          <div>
+            <b style="font-size:1.05rem;">Quer uma curadoria personalizada?</b>
+            <p class="muted">Diga seu perfil e enviamos oportunidades dentro do seu objetivo.</p>
+          </div>
+          <a class="btn btn--cta" href="imoveis.html">Começar agora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container" style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+    <div><b>LuxPrime</b><div class="muted">Fale conosco • Atendimento premium</div></div>
+    <div class="muted">© <span id="year"></span> LuxPrime.</div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Imóveis — LuxPrime</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html"><span class="brand__mark"></span><span>LuxPrime</span></a>
+
+      <nav class="menu">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="imoveis.html">Imóveis</a>
+        <a data-nav href="sobre.html">Sobre nós</a>
+        <a data-nav href="contato.html">Fale Conosco</a>
+      </nav>
+
+      <div class="nav__right">
+        <a class="btn btn--cta" href="contato.html">Agendar visita</a>
+        <button class="burger" id="burger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+
+    <div class="mobilePanel" id="mobilePanel">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="imoveis.html">Imóveis</a>
+      <a data-nav href="sobre.html">Sobre nós</a>
+      <a data-nav href="contato.html">Fale Conosco</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="reveal">
+        <div class="kicker">Catálogo</div>
+        <h1 class="sectionTitle">Imóveis disponíveis</h1>
+        <p class="muted">Use filtros simples agora e depois evoluímos para busca real (API/planilha).</p>
+      </div>
+
+      <!-- filtros (mock) -->
+      <div class="card reveal" style="padding:16px; margin-top:14px;">
+        <form class="formRow" style="grid-template-columns: repeat(4, 1fr);">
+          <select><option>Tipo</option><option>Apartamento</option><option>Casa</option><option>Cobertura</option></select>
+          <select><option>Região</option><option>Zona Sul</option><option>Barra</option><option>Recreio</option></select>
+          <select><option>Faixa</option><option>Até 500k</option><option>500k–1M</option><option>+1M</option></select>
+          <a class="btn btn--cta" href="contato.html">Receber curadoria</a>
+        </form>
+      </div>
+
+      <!-- lista -->
+      <div id="lista" class="grid3" style="margin-top:18px;">
+        <!-- repita cards -->
+        <article class="card listing hover-lift reveal">
+          <div class="listing__img" style="background-image:url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1400&q=80');"></div>
+          <div class="listing__body">
+            <span class="badge">Apartamento • Alto padrão</span>
+            <div class="price">R$ 1.350.000</div>
+            <div class="meta">📍 Ipanema • 🛏️ 2 quartos • 📐 92m²</div>
+            <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="btn btn--cta" href="contato.html">Agendar visita</a>
+              <a class="btn" href="contato.html">Solicitar fotos</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card listing hover-lift reveal" style="--i:1">
+          <div class="listing__img" style="background-image:url('https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1400&q=80');"></div>
+          <div class="listing__body">
+            <span class="badge">Cobertura • Duplex</span>
+            <div class="price">R$ 3.100.000</div>
+            <div class="meta">📍 Leblon • 🛏️ 3 suítes • 📐 210m²</div>
+            <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="btn btn--cta" href="contato.html">Agendar tour</a>
+              <a class="btn" href="contato.html">Negociar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card listing hover-lift reveal" style="--i:2">
+          <div class="listing__img" style="background-image:url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1400&q=80');"></div>
+          <div class="listing__body">
+            <span class="badge">Casa • Condomínio</span>
+            <div class="price">R$ 2.890.000</div>
+            <div class="meta">📍 Barra • 🛏️ 4 suítes • 📐 320m²</div>
+            <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="btn btn--cta" href="contato.html">Agendar visita</a>
+              <a class="btn" href="contato.html">Ver documentação</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="reveal" style="margin-top:22px;">
+        <div class="ctaBand card">
+          <div>
+            <b style="font-size:1.05rem;">Não achou o que procura?</b>
+            <p class="muted">Nos diga seu perfil e buscamos oportunidades fora do catálogo público.</p>
+          </div>
+          <a class="btn btn--cta" href="contato.html">Quero um especialista</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container" style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+    <div><b>LuxPrime</b><div class="muted">Curadoria • Confiança • Resultado</div></div>
+    <div class="muted">© <span id="year"></span> LuxPrime.</div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
