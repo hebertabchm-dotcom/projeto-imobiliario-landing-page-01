@@ -419,6 +419,16 @@ select:focus {
   margin-top: 22px;
 }
 
+/* Small helpers to replace inline styles from templates */
+.card--pad {
+  padding: 16px;
+}
+.formRow--4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
 .action-row {
   margin-top: 12px;
   display: flex;
