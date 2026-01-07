@@ -1,249 +1,397 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LuxPrime Imóveis — Exclusivos para clientes exigentes</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>LuxPrime Imóveis — Exclusivos para clientes exigentes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="nav">
+          <a class="brand" href="index.html">
+            <span class="brand__mark" aria-hidden="true"></span>
+            <span>LuxPrime</span>
+          </a>
 
-<header class="header">
-  <div class="container">
-    <div class="nav">
-      <a class="brand" href="index.html">
-        <span class="brand__mark" aria-hidden="true"></span>
-        <span>LuxPrime</span>
-      </a>
+          <nav class="menu" aria-label="Menu principal">
+            <a data-nav href="index.html">Home</a>
+            <a data-nav href="imoveis.html">Imóveis</a>
+            <a data-nav href="sobre.html">Sobre nós</a>
+            <a data-nav href="contato.html">Fale Conosco</a>
+          </nav>
 
-      <nav class="menu" aria-label="Menu principal">
-        <a data-nav href="index.html">Home</a>
-        <a data-nav href="imoveis.html">Imóveis</a>
-        <a data-nav href="sobre.html">Sobre nós</a>
-        <a data-nav href="contato.html">Fale Conosco</a>
-      </nav>
-
-      <div class="nav__right">
-        <a class="btn btn--cta" href="contato.html">Agendar visita</a>
-        <button class="burger" id="burger" aria-label="Abrir menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-
-    <div class="mobilePanel" id="mobilePanel">
-      <a data-nav href="index.html">Home</a>
-      <a data-nav href="imoveis.html">Imóveis</a>
-      <a data-nav href="sobre.html">Sobre nós</a>
-      <a data-nav href="contato.html">Fale Conosco</a>
-    </div>
-  </div>
-</header>
-
-<main>
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__bg" aria-hidden="true"></div>
-    <div class="container hero__content">
-      <div class="reveal">
-        <span class="pill">🏙️ Curadoria premium • Atendimento humano</span>
-        <h1 class="h1">Imóveis exclusivos para clientes exigentes.</h1>
-        <p>
-          Se você busca mais do que um imóvel, você está no lugar certo.
-          Selecionamos oportunidades raras, com segurança, discrição e experiência completa do primeiro contato ao fechamento.
-        </p>
-
-        <div class="hero__ctaRow">
-          <a class="btn btn--cta" href="imoveis.html">Ver imóveis em destaque</a>
-          <a class="btn" href="contato.html">Falar com especialista</a>
-        </div>
-
-        <div class="stats">
-          <div class="stat">
-            <b>+120</b><span>imóveis na curadoria</span>
-          </div>
-          <div class="stat">
-            <b>24h</b><span>retorno em até 1 dia útil</span>
-          </div>
-          <div class="stat">
-            <b>360°</b><span>tour virtual sob demanda</span>
+          <div class="nav__right">
+            <a class="btn btn--cta" href="contato.html">Agendar visita</a>
+            <button class="burger" id="burger" aria-label="Abrir menu">
+              <span></span><span></span><span></span>
+            </button>
           </div>
         </div>
+
+        <div class="mobilePanel" id="mobilePanel">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="imoveis.html">Imóveis</a>
+          <a data-nav href="sobre.html">Sobre nós</a>
+          <a data-nav href="contato.html">Fale Conosco</a>
+        </div>
       </div>
+    </header>
 
-      <!-- Painel de busca -->
-      <aside class="card hero__panel hover-lift reveal" style="--i:1">
-        <h3>Encontre seu imóvel ideal</h3>
-        <form id="heroSearchForm">
-          <div class="formRow">
-            <select name="tipo" aria-label="Tipo">
-              <option value="Apartamento">Apartamento</option>
-              <option value="Casa">Casa</option>
-              <option value="Cobertura">Cobertura</option>
-              <option value="Comercial">Comercial</option>
-            </select>
-            <input class="input" name="bairro" placeholder="Bairro / Região" />
-          </div>
-          <div class="formRow" style="margin-top:10px;">
-            <select name="faixa" aria-label="Faixa de valor">
-              <option value="Até 500k">Até R$ 500 mil</option>
-              <option value="500k-1M">R$ 500k a R$ 1M</option>
-              <option value="1M-3M">R$ 1M a R$ 3M</option>
-              <option value="+3M">Acima de R$ 3M</option>
-            </select>
-            <button class="btn btn--cta" type="submit">Buscar agora</button>
-          </div>
-        </form>
-        <p class="muted" style="margin:12px 0 0;">
-          Preferir atendimento direto? <a href="contato.html" style="text-decoration:underline;">Fale conosco</a>.
-        </p>
-      </aside>
-    </div>
-  </section>
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="container hero__content">
+          <div class="reveal">
+            <span class="pill">🏙️ Curadoria premium • Atendimento humano</span>
+            <h1 class="h1">Imóveis exclusivos para clientes exigentes.</h1>
+            <p>
+              Se você busca mais do que um imóvel, você está no lugar certo.
+              Selecionamos oportunidades raras, com segurança, discrição e
+              experiência completa do primeiro contato ao fechamento.
+            </p>
 
-  <!-- BENEFÍCIOS -->
-  <section class="section">
-    <div class="container">
-      <div class="reveal">
-        <div class="kicker">Por que escolher a LuxPrime</div>
-        <h2 class="sectionTitle">Uma experiência premium, do começo ao fim.</h2>
-        <p class="muted">Curadoria, negociação e suporte jurídico para você comprar com tranquilidade.</p>
-      </div>
+            <div class="hero__ctaRow">
+              <a class="btn btn--cta" href="imoveis.html"
+                >Ver imóveis em destaque</a
+              >
+              <a class="btn" href="contato.html">Falar com especialista</a>
+            </div>
 
-      <div class="grid3" style="margin-top:18px;">
-        <article class="card feature hover-lift reveal">
-          <div class="badge">🔎 Curadoria</div>
-          <h3>Imóveis realmente selecionados</h3>
-          <p>Somente opções com padrão de qualidade, localização estratégica e potencial de valorização.</p>
-          <div style="margin-top:12px;">
-            <a class="btn" href="imoveis.html">Explorar catálogo</a>
-          </div>
-        </article>
-
-        <article class="card feature hover-lift reveal" style="--i:1">
-          <div class="badge">🧭 Consultoria</div>
-          <h3>Atendimento consultivo</h3>
-          <p>Entendemos seu objetivo, perfil e prazo para recomendar as melhores oportunidades.</p>
-          <div style="margin-top:12px;">
-            <a class="btn" href="contato.html">Quero falar agora</a>
-          </div>
-        </article>
-
-        <article class="card feature hover-lift reveal" style="--i:2">
-          <div class="badge">🛡️ Segurança</div>
-          <h3>Suporte e negociação</h3>
-          <p>Da proposta ao fechamento: documentação, visitas, condições e acompanhamento completo.</p>
-          <div style="margin-top:12px;">
-            <a class="btn" href="sobre.html">Conhecer o processo</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- DESTAQUES (cards de imóveis) -->
-  <section class="section section--light">
-    <div class="container">
-      <div class="reveal">
-        <div class="kicker">Imóveis em destaque</div>
-        <h2 class="sectionTitle">Oportunidades prontas para visitar.</h2>
-        <p class="muted">Troque as imagens pelos seus ativos (ou conecte com API no futuro).</p>
-      </div>
-
-      <div class="grid3" style="margin-top:18px;">
-        <article class="card listing hover-lift reveal">
-          <div class="listing__img" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80');"></div>
-          <div class="listing__body">
-            <span class="badge">Cobertura • Vista livre</span>
-            <div class="price">R$ 2.450.000</div>
-            <div class="meta">📍 Barra da Tijuca • 🛏️ 3 suítes • 📐 220m²</div>
-            <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-              <a class="btn btn--cta" href="contato.html">Agendar visita</a>
-              <a class="btn" href="imoveis.html#lista">Ver mais</a>
+            <div class="stats">
+              <div class="stat">
+                <b>+120</b><span>imóveis na curadoria</span>
+              </div>
+              <div class="stat">
+                <b>24h</b><span>retorno em até 1 dia útil</span>
+              </div>
+              <div class="stat">
+                <b>360°</b><span>tour virtual sob demanda</span>
+              </div>
             </div>
           </div>
-        </article>
 
-        <article class="card listing hover-lift reveal" style="--i:1">
-          <div class="listing__img" style="background-image:url('https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=1400&q=80');"></div>
-          <div class="listing__body">
-            <span class="badge">Apartamento • Reformado</span>
-            <div class="price">R$ 980.000</div>
-            <div class="meta">📍 Botafogo • 🛏️ 2 quartos • 📐 86m²</div>
-            <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-              <a class="btn btn--cta" href="contato.html">Solicitar detalhes</a>
-              <a class="btn" href="imoveis.html#lista">Ver mais</a>
+          <!-- Painel de busca -->
+          <aside class="card hero__panel hover-lift reveal" style="--i: 1">
+            <h3>Encontre seu imóvel ideal</h3>
+            <form id="heroSearchForm">
+              <div class="formRow">
+                <div class="select-wrapper">
+                  <select name="tipo" aria-label="Tipo">
+                    <option value="Apartamento">Apartamento</option>
+                    <option value="Casa">Casa</option>
+                    <option value="Cobertura">Cobertura</option>
+                    <option value="Comercial">Comercial</option>
+                  </select>
+                </div>
+                <input
+                  class="input"
+                  name="bairro"
+                  placeholder="Bairro / Região"
+                />
+              </div>
+              <div class="formRow" style="margin-top: 10px">
+                <div class="select-wrapper">
+                  <select name="faixa" aria-label="Faixa de valor">
+                    <option value="Até 500k">Até R$ 500 mil</option>
+                    <option value="500k-1M">R$ 500k a R$ 1M</option>
+                    <option value="1M-3M">R$ 1M a R$ 3M</option>
+                    <option value="+3M">Acima de R$ 3M</option>
+                  </select>
+                </div>
+                <button class="btn btn--cta" type="submit">Buscar agora</button>
+              </div>
+            </form>
+            <p class="muted" style="margin: 12px 0 0">
+              Preferir atendimento direto?
+              <a href="contato.html" style="text-decoration: underline"
+                >Fale conosco</a
+              >.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- BENEFÍCIOS -->
+      <section class="section">
+        <div class="container">
+          <div class="reveal">
+            <div class="kicker">Por que escolher a LuxPrime</div>
+            <h2 class="sectionTitle">
+              Uma experiência premium, do começo ao fim.
+            </h2>
+            <p class="muted">
+              Curadoria, negociação e suporte jurídico para você comprar com
+              tranquilidade.
+            </p>
+          </div>
+
+          <div class="grid3" style="margin-top: 18px">
+            <article class="card feature hover-lift reveal">
+              <div class="badge">🔎 Curadoria</div>
+              <h3>Imóveis realmente selecionados</h3>
+              <p>
+                Somente opções com padrão de qualidade, localização estratégica
+                e potencial de valorização.
+              </p>
+              <div style="margin-top: 12px">
+                <a class="btn" href="imoveis.html">Explorar catálogo</a>
+              </div>
+            </article>
+
+            <article class="card feature hover-lift reveal" style="--i: 1">
+              <div class="badge">🧭 Consultoria</div>
+              <h3>Atendimento consultivo</h3>
+              <p>
+                Entendemos seu objetivo, perfil e prazo para recomendar as
+                melhores oportunidades.
+              </p>
+              <div style="margin-top: 12px">
+                <a class="btn" href="contato.html">Quero falar agora</a>
+              </div>
+            </article>
+
+            <article class="card feature hover-lift reveal" style="--i: 2">
+              <div class="badge">🛡️ Segurança</div>
+              <h3>Suporte e negociação</h3>
+              <p>
+                Da proposta ao fechamento: documentação, visitas, condições e
+                acompanhamento completo.
+              </p>
+              <div style="margin-top: 12px">
+                <a class="btn" href="sobre.html">Conhecer o processo</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- DESTAQUES (cards de imóveis) -->
+      <section class="section section--light">
+        <div class="container">
+          <div class="reveal">
+            <div class="kicker">Imóveis em destaque</div>
+            <h2 class="sectionTitle">Oportunidades prontas para visitar.</h2>
+            <p class="muted">
+              Troque as imagens pelos seus ativos (ou conecte com API no
+              futuro).
+            </p>
+          </div>
+
+          <div class="grid3" style="margin-top: 18px">
+            <article class="card listing hover-lift reveal">
+              <picture class="listing__img">
+                <source
+                  type="image/webp"
+                  srcset="
+                    assets/img/cobertura-600.webp   600w,
+                    assets/img/cobertura-900.webp   900w,
+                    assets/img/cobertura-1400.webp 1400w
+                  "
+                  sizes="(max-width: 980px) 100vw, 33vw"
+                />
+                <img
+                  src="assets/img/cobertura-1400.jpg"
+                  srcset="
+                    assets/img/cobertura-600.jpg   600w,
+                    assets/img/cobertura-900.jpg   900w,
+                    assets/img/cobertura-1400.jpg 1400w
+                  "
+                  sizes="(max-width: 980px) 100vw, 33vw"
+                  alt="Cobertura com vista livre"
+                  loading="lazy"
+                />
+              </picture>
+              <div class="listing__body">
+                <span class="badge">Cobertura • Vista livre</span>
+                <div class="price">R$ 2.450.000</div>
+                <div class="meta">
+                  📍 Barra da Tijuca • 🛏️ 3 suítes • 📐 220m²
+                </div>
+                <div
+                  style="
+                    margin-top: 12px;
+                    display: flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <a class="btn btn--cta" href="contato.html">Agendar visita</a>
+                  <a class="btn" href="imoveis.html#lista">Ver mais</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card listing hover-lift reveal" style="--i: 1">
+              <picture class="listing__img">
+                <source
+                  type="image/webp"
+                  srcset="
+                    assets/img/apartamento-600.webp   600w,
+                    assets/img/apartamento-900.webp   900w,
+                    assets/img/apartamento-1400.webp 1400w
+                  "
+                  sizes="(max-width: 980px) 100vw, 33vw"
+                />
+                <img
+                  src="assets/img/apartamento-1400.jpg"
+                  srcset="
+                    assets/img/apartamento-600.jpg   600w,
+                    assets/img/apartamento-900.jpg   900w,
+                    assets/img/apartamento-1400.jpg 1400w
+                  "
+                  sizes="(max-width: 980px) 100vw, 33vw"
+                  alt="Apartamento reformado"
+                  loading="lazy"
+                />
+              </picture>
+              <div class="listing__body">
+                <span class="badge">Apartamento • Reformado</span>
+                <div class="price">R$ 980.000</div>
+                <div class="meta">📍 Botafogo • 🛏️ 2 quartos • 📐 86m²</div>
+                <div
+                  style="
+                    margin-top: 12px;
+                    display: flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <a class="btn btn--cta" href="contato.html"
+                    >Solicitar detalhes</a
+                  >
+                  <a class="btn" href="imoveis.html#lista">Ver mais</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card listing hover-lift reveal" style="--i: 2">
+              <picture class="listing__img">
+                <source
+                  type="image/webp"
+                  srcset="
+                    assets/img/casa-600.webp   600w,
+                    assets/img/casa-900.webp   900w,
+                    assets/img/casa-1400.webp 1400w
+                  "
+                  sizes="(max-width: 980px) 100vw, 33vw"
+                />
+                <img
+                  src="assets/img/casa-1400.jpg"
+                  srcset="
+                    assets/img/casa-600.jpg   600w,
+                    assets/img/casa-900.jpg   900w,
+                    assets/img/casa-1400.jpg 1400w
+                  "
+                  sizes="(max-width: 980px) 100vw, 33vw"
+                  alt="Casa em condomínio"
+                  loading="lazy"
+                />
+              </picture>
+              <div class="listing__body">
+                <span class="badge">Casa • Condomínio</span>
+                <div class="price">R$ 3.790.000</div>
+                <div class="meta">📍 Recreio • 🛏️ 4 suítes • 📐 340m²</div>
+                <div
+                  style="
+                    margin-top: 12px;
+                    display: flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <a class="btn btn--cta" href="contato.html">Agendar tour</a>
+                  <a class="btn" href="imoveis.html#lista">Ver mais</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="reveal" style="margin-top: 22px">
+            <div class="ctaBand card">
+              <div>
+                <b style="font-size: 1.05rem"
+                  >Quer receber imóveis no seu perfil?</b
+                >
+                <p class="muted">
+                  Enviamos uma curadoria personalizada com 3 opções reais em até
+                  24h.
+                </p>
+              </div>
+              <a class="btn btn--cta" href="contato.html">Pedir curadoria</a>
             </div>
           </div>
-        </article>
+        </div>
+      </section>
 
-        <article class="card listing hover-lift reveal" style="--i:2">
-          <div class="listing__img" style="background-image:url('https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1400&q=80');"></div>
-          <div class="listing__body">
-            <span class="badge">Casa • Condomínio</span>
-            <div class="price">R$ 3.790.000</div>
-            <div class="meta">📍 Recreio • 🛏️ 4 suítes • 📐 340m²</div>
-            <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-              <a class="btn btn--cta" href="contato.html">Agendar tour</a>
-              <a class="btn" href="imoveis.html#lista">Ver mais</a>
+      <!-- BLOCO DE VÍDEO / TOUR (local para embed) -->
+      <section class="section">
+        <div class="container">
+          <div class="grid2">
+            <div class="reveal">
+              <div class="kicker">Tour & Experiência</div>
+              <h2 class="sectionTitle">Veja antes de visitar.</h2>
+              <p class="muted">
+                Aqui você pode inserir um vídeo institucional, um tour 360°, ou
+                um vídeo de imóvel destaque.
+              </p>
+              <div
+                style="
+                  margin-top: 14px;
+                  display: flex;
+                  gap: 10px;
+                  flex-wrap: wrap;
+                "
+              >
+                <a class="btn btn--cta" href="contato.html"
+                  >Quero um tour guiado</a
+                >
+                <a class="btn" href="imoveis.html">Ver catálogo completo</a>
+              </div>
+            </div>
+
+            <div class="media reveal hover-lift">
+              <!-- Troque o src por seu vídeo do YouTube/Vimeo -->
+              <iframe
+                src="https://www.youtube.com/embed/ScMzIvxBSi4"
+                title="Vídeo / Tour"
+                loading="lazy"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              >
+              </iframe>
             </div>
           </div>
-        </article>
-      </div>
+        </div>
+      </section>
+    </main>
 
-      <div class="reveal" style="margin-top:22px;">
-        <div class="ctaBand card">
-          <div>
-            <b style="font-size:1.05rem;">Quer receber imóveis no seu perfil?</b>
-            <p class="muted">Enviamos uma curadoria personalizada com 3 opções reais em até 24h.</p>
-          </div>
-          <a class="btn btn--cta" href="contato.html">Pedir curadoria</a>
+    <footer class="footer">
+      <div
+        class="container"
+        style="
+          display: flex;
+          justify-content: space-between;
+          gap: 16px;
+          flex-wrap: wrap;
+        "
+      >
+        <div>
+          <b>LuxPrime</b>
+          <div class="muted">Imóveis exclusivos • Atendimento consultivo</div>
+        </div>
+        <div class="muted">
+          © <span id="year"></span> LuxPrime. Todos os direitos reservados.
         </div>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- BLOCO DE VÍDEO / TOUR (local para embed) -->
-  <section class="section">
-    <div class="container">
-      <div class="grid2">
-        <div class="reveal">
-          <div class="kicker">Tour & Experiência</div>
-          <h2 class="sectionTitle">Veja antes de visitar.</h2>
-          <p class="muted">
-            Aqui você pode inserir um vídeo institucional, um tour 360°, ou um vídeo de imóvel destaque.
-          </p>
-          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn btn--cta" href="contato.html">Quero um tour guiado</a>
-            <a class="btn" href="imoveis.html">Ver catálogo completo</a>
-          </div>
-        </div>
-
-        <div class="media reveal hover-lift">
-          <!-- Troque o src por seu vídeo do YouTube/Vimeo -->
-          <iframe
-            src="https://www.youtube.com/embed/ScMzIvxBSi4"
-            title="Vídeo / Tour"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="container" style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;">
-    <div>
-      <b>LuxPrime</b><div class="muted">Imóveis exclusivos • Atendimento consultivo</div>
-    </div>
-    <div class="muted">© <span id="year"></span> LuxPrime. Todos os direitos reservados.</div>
-  </div>
-</footer>
-
-<script src="app.js"></script>
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-</body>
+    <script src="app.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
