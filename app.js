@@ -233,9 +233,12 @@
   const isSaturday = day === 6 && hour >= 9 && hour < 14;
 
   if (!isWeekday && !isSaturday) {
-    btn.style.display = "none";
-    return;
-  }
+  btn.style.opacity = "0.75";
+  btn.setAttribute("data-tooltip", "Atendimento: seg–sex 9h–19h");
+  // NÃO retorna; mantém o botão visível
+}
+
+  
 
   // =========================
   // 2️⃣ A/B TEST TOOLTIP
