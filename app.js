@@ -156,3 +156,187 @@
   const el = document.getElementById("year");
   if (el) el.textContent = new Date().getFullYear();
 })();
+// =====================================================
+// WhatsApp Floating Button – dinâmica + eventos
+// =====================================================
+(function whatsappFloat() {
+  const btn = document.getElementById("whatsappFloat");
+  if (!btn) return;
+
+  const phone = "5521000000000"; // 🔁 TROQUE PELO NÚMERO REAL
+  const page = location.pathname.includes("imoveis")
+    ? "imóveis"
+    : location.pathname.includes("contato")
+    ? "atendimento"
+    : "site";
+
+  const messageMap = {
+    site: "Olá, gostaria de falar com um especialista da LuxPrime.",
+    imóveis: "Olá, estou vendo imóveis no site da LuxPrime e gostaria de ajuda.",
+    atendimento: "Olá, gostaria de atendimento personalizado da LuxPrime."
+  };
+
+  const text = encodeURIComponent(messageMap[page] || messageMap.site);
+  btn.href = `https://wa.me/${phone}?text=${text}`;
+
+  // animação após 5s
+  setTimeout(() => {
+    btn.classList.add("attention");
+  }, 5000);
+
+  // remove animação ao interagir
+  ["mouseenter", "click", "touchstart"].forEach((evt) => {
+    btn.addEventListener(evt, () => btn.classList.remove("attention"));
+  });
+
+  // =========================
+  // Eventos de conversão
+  // =========================
+  btn.addEventListener("click", () => {
+    // Google Analytics 4
+    if (typeof gtag === "function") {
+      gtag("event", "whatsapp_click", {
+        event_category: "engagement",
+        event_label: page
+      });
+    }
+
+    // Meta Pixel
+    if (typeof fbq === "function") {
+      fbq("track", "Contact", {
+        content_name: "WhatsApp LuxPrime",
+        page
+      });
+    }
+  });
+})();
+// =====================================================
+// WhatsApp Inteligente – LuxPrime (PRO)
+// =====================================================
+(function whatsappPro() {
+  btn.addEventListener("click", (e) => {
+  e.preventDefault();
+});
+
+  const btn = document.getElementById("whatsappFloat");
+  if (!btn) return;
+
+  const phone = "5521000000000"; // 🔁 TROQUE
+  const now = new Date();
+  const day = now.getDay(); // 0 = domingo
+  const hour = now.getHours();
+
+  // =========================
+  // 1️⃣ HORÁRIO COMERCIAL
+  // =========================
+  const isWeekday = day >= 1 && day <= 5 && hour >= 9 && hour < 19;
+  const isSaturday = day === 6 && hour >= 9 && hour < 14;
+
+  if (!isWeekday && !isSaturday) {
+    btn.style.display = "none";
+    return;
+  }
+
+  // =========================
+  // 2️⃣ A/B TEST TOOLTIP
+  // =========================
+  const tooltips = [
+    "Fale com um especialista",
+    "Atendimento personalizado"
+  ];
+
+  let tooltipVariant = localStorage.getItem("lp_tooltip_variant");
+
+  if (!tooltipVariant) {
+    tooltipVariant = Math.random() < 0.5 ? 0 : 1;
+    localStorage.setItem("lp_tooltip_variant", tooltipVariant);
+  }
+
+  btn.setAttribute("data-tooltip", tooltips[tooltipVariant]);
+
+  // =========================
+  // 3️⃣ CAPTURA DE CONTEXTO (bairro / região)
+  // =========================
+  function getContext() {
+    const params = new URLSearchParams(location.search);
+    const regiao = params.get("regiao") || "";
+    const bairro = params.get("bairro") || "";
+
+    if (bairro) return `bairro ${bairro}`;
+    if (regiao) return `região ${regiao}`;
+    return null;
+  }
+
+  const context = getContext();
+  const page =
+    location.pathname.includes("imoveis") ? "imóveis" :
+    location.pathname.includes("contato") ? "atendimento" :
+    "site";
+
+  let message = "Olá, gostaria de falar com um especialista da LuxPrime.";
+
+  if (context) {
+    message = `Olá, estou interessado em imóveis na ${context} e gostaria de atendimento.`;
+  } else if (page === "imóveis") {
+    message = "Olá, estou navegando pelos imóveis da LuxPrime e gostaria de ajuda.";
+  }
+
+  btn.href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+  // =========================
+  // 4️⃣ ANIMAÇÃO APÓS 5s
+  // =========================
+  setTimeout(() => btn.classList.add("attention"), 5000);
+
+  ["mouseenter", "click", "touchstart"].forEach((evt) => {
+    btn.addEventListener(evt, () => btn.classList.remove("attention"));
+  });
+
+  // =========================
+  // 5️⃣ EVENTOS + CRM
+  // =========================
+  btn.addEventListener("click", () => {
+    // GA4
+    if (typeof gtag === "function") {
+      gtag("event", "whatsapp_click", {
+        event_category: "engagement",
+        event_label: page,
+        value: tooltipVariant
+      });
+    }
+
+    // Meta Pixel
+    if (typeof fbq === "function") {
+      fbq("track", "Contact", {
+        content_name: "WhatsApp LuxPrime",
+        page,
+        variant: tooltipVariant
+      });
+    }
+
+    // CRM / Webhook
+    fetch("https://SEU-WEBHOOK-AQUI", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        origem: "WhatsApp",
+        pagina: page,
+        contexto: context,
+        tooltip: tooltips[tooltipVariant],
+        data: new Date().toISOString()
+      })
+    }).catch(() => {});
+  });
+})();
+(function headerOnScroll() {
+  const header = document.querySelector(".header");
+  if (!header) return;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+      header.classList.add("is-scrolled");
+    } else {
+      header.classList.remove("is-scrolled");
+    }
+  });
+})();

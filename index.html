@@ -570,20 +570,96 @@
     </main>
 
     <footer class="footer">
-      <div class="container footer__container">
-        <div>
-          <b>LuxPrime</b>
-          <div class="muted">Imóveis exclusivos • Atendimento consultivo</div>
-        </div>
-        <div class="muted">
-          © <span id="year"></span> LuxPrime. Todos os direitos reservados.
-        </div>
-      </div>
-    </footer>
+  <div class="container footer__container">
 
-    <script src="app.js"></script>
+    <!-- Marca / Descrição -->
+    <div class="footer__brand">
+      <b class="footer__logo">LuxPrime</b>
+      <p class="muted">
+        Imóveis exclusivos com atendimento consultivo e acompanhamento completo
+        do primeiro contato ao fechamento.
+      </p>
+
+      <!-- Redes sociais -->
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram" title="Instagram">
+          <!-- Instagram -->
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M7.75 2h8.5C19.99 2 22 4.01 22 6.25v11.5C22 19.99 19.99 22 16.25 22h-8.5C4.01 22 2 19.99 2 17.75V6.25C2 4.01 4.01 2 7.75 2zm8.5 1.5h-8.5A3.25 3.25 0 004.5 6.25v11.5A3.25 3.25 0 007.75 21h8.5a3.25 3.25 0 003.25-3.25V6.25A3.25 3.25 0 0016.25 3.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.5-.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+            />
+          </svg>
+        </a>
+
+        <a href="#" aria-label="WhatsApp" title="WhatsApp">
+          <!-- WhatsApp -->
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12.04 2C6.58 2 2.13 6.44 2.13 11.9c0 2.11.55 4.17 1.6 5.98L2 22l4.27-1.67a9.86 9.86 0 005.77 1.78h.01c5.46 0 9.9-4.44 9.9-9.9C21.95 6.44 17.5 2 12.04 2z"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navegação -->
+    <div class="footer__nav">
+      <b>Navegação</b>
+      <a href="index.html">Home</a>
+      <a href="imoveis.html">Imóveis</a>
+      <a href="sobre.html">Sobre nós</a>
+      <a href="contato.html">Fale Conosco</a>
+    </div>
+
+    <!-- Contato -->
+    <div class="footer__contact">
+      <b>Contato</b>
+      <p class="muted">
+        📍 Av. Atlântica, 1500 – Copacabana<br />
+        Rio de Janeiro – RJ<br />
+        CEP 22021-000
+      </p>
+      <p class="muted">
+        📞 (21) 0000-0000<br />
+        ✉️ contato@luxprime.com.br
+      </p>
+    </div>
+  </div>
+
+  <!-- Linha inferior -->
+  <div class="footer__bottom">
+    © <span id="year"></span> LuxPrime. Todos os direitos reservados. | <small>Desenvolvido por <a href="https://github.com/hebertabchm-dotcom" class="desenvolvedor">👨🏻‍💻 Hebert Matheus</a></small>
+  </div>
+</footer>
+
+
+    <script src="app.js" defer></script>
+
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+
+  <a
+  class="whatsapp-float"
+  id="whatsappFloat"
+  target="_blank"
+  rel="noopener"
+  data-tooltip="Fale com um especialista"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="26"
+    height="26"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true"
+  >
+    <path
+      d="M12.04 2C6.58 2 2.13 6.44 2.13 11.9c0 2.11.55 4.17 1.6 5.98L2 22l4.27-1.67a9.86 9.86 0 005.77 1.78h.01c5.46 0 9.9-4.44 9.9-9.9C21.95 6.44 17.5 2 12.04 2zm5.72 14.42c-.24.68-1.38 1.3-1.9 1.38-.48.08-1.08.12-1.75-.11-.4-.13-.92-.3-1.6-.6-2.8-1.21-4.62-4.03-4.76-4.22-.14-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.06.98-2.34.24-.26.54-.33.72-.33.18 0 .36 0 .52.01.17.01.39-.07.61.47.24.6.82 2.06.9 2.21.08.15.12.33.02.52-.1.19-.15.33-.3.5-.15.17-.32.38-.46.5-.15.13-.3.27-.13.53.17.26.76 1.25 1.63 2.02 1.12 1 2.07 1.32 2.34 1.47.27.15.43.13.59-.08.17-.2.68-.8.86-1.08.18-.27.36-.23.6-.14.24.1 1.5.71 1.76.84.26.13.44.2.5.31.07.11.07.66-.17 1.34z"
+    />
+  </svg>
+</a>
+
+
   </body>
 </html>

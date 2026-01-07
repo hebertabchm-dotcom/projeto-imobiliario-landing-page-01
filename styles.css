@@ -3,28 +3,34 @@
    ========================================================= */
 
 :root {
-  --bg: #0f1115;
-  --surface: rgba(255, 255, 255, 0.06);
-  --surface2: rgba(255, 255, 255, 0.08);
+  /* Base mais profundo (luxo) */
+  --bg: #0b0d12; /* antes: #0f1115 */
+
+  /* Superfícies um pouco mais “ricas” e menos acinzentadas */
+  --surface: rgba(255, 255, 255, 0.055);  /* antes 0.06 */
+  --surface2: rgba(255, 255, 255, 0.085); /* antes 0.08 */
   --border: rgba(255, 255, 255, 0.12);
 
   --text: #fff;
-  --textSoft: rgba(255, 255, 255, 0.86);
+  --textSoft: rgba(255, 255, 255, 0.88); /* levemente mais legível */
   --muted: rgba(255, 255, 255, 0.68);
 
-  --warm100: #fdc054;
-  --warm200: #f98f34;
-  --warm300: #d96a21;
+  /* Dourado mais sofisticado (menos “laranja”) */
+  --warm100: #f6d27a; /* antes #fdc054 */
+  --warm200: #eaa64a; /* antes #f98f34 */
+  --warm300: #c77c2c; /* antes #d96a21 */
   --paper: #fcf7e2;
 
+  /* Gradiente CTA mais “premium” (mantém variável) */
   --gradCTA: linear-gradient(90deg, var(--warm100), var(--warm200));
 
   --r14: 14px;
   --r18: 18px;
   --r24: 24px;
 
-  --shadow1: 0 10px 30px rgba(0, 0, 0, 0.25);
-  --shadow2: 0 18px 60px rgba(0, 0, 0, 0.45);
+  /* Sombras com mais “depth” (luxury glass) */
+  --shadow1: 0 12px 34px rgba(0, 0, 0, 0.36); /* antes 0 10px 30px 0.25 */
+  --shadow2: 0 22px 72px rgba(0, 0, 0, 0.56); /* antes 0 18px 60px 0.45 */
 
   --dur1: 160ms;
   --dur2: 240ms;
@@ -88,26 +94,37 @@ img {
   margin-inline: auto;
 }
 
+/* =========================================================
+   Buttons – acabamento premium
+========================================================= */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.055);
   color: var(--text);
   padding: 12px 18px;
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 650;
   cursor: pointer;
+
+  /* toque mais premium */
+  box-shadow:
+    0 12px 26px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.10);
+
   transition: transform var(--dur2) var(--easeOut),
     box-shadow var(--dur2) var(--easeOut),
-    border-color var(--dur2) var(--easeOut);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    border-color var(--dur2) var(--easeOut),
+    background var(--dur2) var(--easeOut);
 }
 .btn:hover {
   transform: translateY(-2px);
   border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--warm100);
 }
 .btn:active {
   transform: translateY(0px) scale(0.99);
@@ -116,13 +133,20 @@ img {
 .btn--cta {
   background: var(--gradCTA);
   color: #1b140f;
-  border-color: rgba(253, 192, 84, 0.35);
-  box-shadow: 0 16px 42px rgba(249, 143, 52, 0.22);
+  border-color: rgba(246, 210, 122, 0.35);
+  box-shadow:
+    0 18px 48px rgba(234, 166, 74, 0.22),
+    0 0 0 6px rgba(246, 210, 122, 0.10);
 }
 .btn--cta:hover {
-  box-shadow: 0 18px 54px rgba(249, 143, 52, 0.3);
+  box-shadow:
+    0 22px 62px rgba(234, 166, 74, 0.30),
+    0 0 0 8px rgba(246, 210, 122, 0.14);
 }
 
+/* =========================================================
+   Pill – mais “joia”
+========================================================= */
 .pill {
   display: inline-flex;
   align-items: center;
@@ -132,24 +156,24 @@ img {
   border-radius: 999px;
 
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 550;
   letter-spacing: 0.2px;
 
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.90);
 
   background: linear-gradient(
     90deg,
-    rgba(253, 192, 84, 0.18),
-    rgba(249, 143, 52, 0.08)
+    rgba(246, 210, 122, 0.16),
+    rgba(234, 166, 74, 0.08)
   );
 
-  border: 1px solid rgba(253, 192, 84, 0.35);
+  border: 1px solid rgba(246, 210, 122, 0.32);
 
   box-shadow:
-    0 6px 18px rgba(0, 0, 0, 0.25),
+    0 8px 22px rgba(0, 0, 0, 0.30),
     inset 0 1px 0 rgba(255, 255, 255, 0.12);
 
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
 
   transition:
     transform 220ms cubic-bezier(0.16, 1, 0.3, 1),
@@ -159,17 +183,19 @@ img {
 .pill:hover {
   transform: translateY(-1px);
   box-shadow:
-    0 10px 26px rgba(0, 0, 0, 0.35),
+    0 12px 30px rgba(0, 0, 0, 0.40),
     inset 0 1px 0 rgba(255, 255, 255, 0.16);
 }
 
-
+/* =========================================================
+   Cards – glass mais sofisticado
+========================================================= */
 .card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: var(--r18);
   box-shadow: var(--shadow1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 }
 
 .hover-lift {
@@ -180,7 +206,7 @@ img {
 .hover-lift:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow2);
-  border-color: rgba(253, 192, 84, 0.22);
+  border-color: rgba(246, 210, 122, 0.20);
 }
 
 /* ---------------- Header / Nav ---------------- */
@@ -188,9 +214,9 @@ img {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(15, 17, 21, 0.72);
+  background: rgba(11, 13, 18, 0.72);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 }
 .nav {
   display: flex;
@@ -202,21 +228,18 @@ img {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: 800;
-  letter-spacing: 0.2px;
+  font-weight: 850;
+  letter-spacing: 0.25px;
 }
 .brand__mark {
   width: 40px;
   height: 40px;
   border-radius: 40px;
-  /*background: radial-gradient(
-    circle at 30% 30%,
-    rgba(253, 192, 84, 0.55),
-    rgba(249, 143, 52, 0.12) 60%,
-    rgba(255, 255, 255, 0.06)
-  );/*/
+
   border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 .menu {
   display: flex;
@@ -229,15 +252,17 @@ img {
   color: var(--textSoft);
   border: 1px solid transparent;
   transition: background var(--dur2) var(--easeOut),
-    border-color var(--dur2) var(--easeOut);
+    border-color var(--dur2) var(--easeOut),
+    transform var(--dur2) var(--easeOut);
 }
 .menu a:hover {
   background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.10);
+  transform: translateY(-1px);
 }
 .menu a.active {
   background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(253, 192, 84, 0.22);
+  border-color: rgba(246, 210, 122, 0.20);
   color: #fff;
 }
 
@@ -274,12 +299,12 @@ img {
   padding: 12px 12px;
   border-radius: 14px;
   color: var(--textSoft);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   background: rgba(255, 255, 255, 0.04);
   margin-top: 10px;
 }
 .mobilePanel a.active {
-  border-color: rgba(253, 192, 84, 0.25);
+  border-color: rgba(246, 210, 122, 0.22);
   color: #fff;
 }
 
@@ -297,9 +322,9 @@ img {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(15, 17, 21, 0.82),
-    rgba(15, 17, 21, 0.4),
-    rgba(15, 17, 21, 0.12)
+    rgba(11, 13, 18, 0.86),
+    rgba(11, 13, 18, 0.46),
+    rgba(11, 13, 18, 0.12)
   );
   z-index: 1;
 }
@@ -308,13 +333,13 @@ img {
   inset: 0;
   background: radial-gradient(
       circle at 25% 20%,
-      rgba(253, 192, 84, 0.3),
+      rgba(246, 210, 122, 0.26),
       transparent 55%
     ),
     url("https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=2200&q=80");
   background-size: cover;
   background-position: center;
-  filter: saturate(1.05) contrast(1.03);
+  filter: saturate(1.05) contrast(1.04);
 }
 .hero__content {
   position: relative;
@@ -373,8 +398,8 @@ select {
 }
 .input:focus,
 select:focus {
-  border-color: rgba(253, 192, 84, 0.55);
-  box-shadow: 0 0 0 6px rgba(253, 192, 84, 0.12);
+  border-color: rgba(246, 210, 122, 0.52);
+  box-shadow: 0 0 0 6px rgba(246, 210, 122, 0.12);
 }
 
 /* Melhorias visuais para selects: remover aparência nativa e usar wrapper com seta SVG */
@@ -432,26 +457,14 @@ select:focus {
 }
 
 /* Utility classes added to remove inline styles and improve validation */
-.mt-10 {
-  margin-top: 10px;
-}
-.mt-12 {
-  margin-top: 12px;
-}
-.mt-14 {
-  margin-top: 14px;
-}
-.mt-18 {
-  margin-top: 18px;
-}
-.mt-22 {
-  margin-top: 22px;
-}
+.mt-10 { margin-top: 10px; }
+.mt-12 { margin-top: 12px; }
+.mt-14 { margin-top: 14px; }
+.mt-18 { margin-top: 18px; }
+.mt-22 { margin-top: 22px; }
 
 /* Small helpers to replace inline styles from templates */
-.card--pad {
-  padding: 16px;
-}
+.card--pad { padding: 16px; }
 .formRow--4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -464,54 +477,25 @@ select:focus {
   gap: 10px;
   flex-wrap: wrap;
 }
-.underline {
-  text-decoration: underline;
-}
+.underline { text-decoration: underline; }
 
 /* Small helper utilities to replace inline form and media styles */
-.form-stack {
-  display: grid;
-  gap: 10px;
-}
-.textarea--tall {
-  min-height: 120px;
-  padding: 14px;
-  border-radius: 18px;
-}
-.media__img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  display: block;
-  border-radius: 12px;
-}
-.mt-0 {
-  margin-top: 0;
-}
+.form-stack { display: grid; gap: 10px; }
+.textarea--tall { min-height: 120px; padding: 14px; border-radius: 18px; }
+.media__img { width: 100%; height: 420px; object-fit: cover; display: block; border-radius: 12px; }
+.mt-0 { margin-top: 0; }
 
-.footer__container {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-.ctaBand__title {
-  font-size: 1.05rem;
-}
+.ctaBand__title { font-size: 1.05rem; }
 
 /* Delay utility for reveal animations */
-.delay-1 {
-  --i: 1;
-}
-.delay-2 {
-  --i: 2;
-}
+.delay-1 { --i: 1; }
+.delay-2 { --i: 2; }
 
 .section--light .btn--cta {
   background: linear-gradient(90deg, var(--warm100), var(--warm200));
   color: #1b140f;
-  border-color: rgba(217, 106, 33, 0.25);
-  box-shadow: 0 12px 36px rgba(217, 106, 33, 0.12);
+  border-color: rgba(199, 124, 44, 0.25);
+  box-shadow: 0 12px 36px rgba(199, 124, 44, 0.12);
 }
 
 /* Se houver selects em áreas de fundo claro, torne-os legíveis */
@@ -537,33 +521,17 @@ select:focus {
 .stat {
   padding: 14px;
   border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   background: rgba(255, 255, 255, 0.05);
 }
-.stat b {
-  display: block;
-  font-size: 1.05rem;
-}
-.stat span {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
+.stat b { display: block; font-size: 1.05rem; }
+.stat span { color: var(--muted); font-size: 0.9rem; }
 
 /* ---------------- Sections ---------------- */
-.section {
-  padding: 72px 0;
-}
-.section--light {
-  background: #fff;
-  color: #111;
-}
-.section--light .card {
-  background: #fff;
-  border-color: rgba(0, 0, 0, 0.08);
-}
-.section--light .muted {
-  color: rgba(0, 0, 0, 0.65);
-}
+.section { padding: 72px 0; }
+.section--light { background: #fff; color: #111; }
+.section--light .card { background: #fff; border-color: rgba(0, 0, 0, 0.08); }
+.section--light .muted { color: rgba(0, 0, 0, 0.65); }
 
 .kicker {
   color: var(--muted);
@@ -576,9 +544,7 @@ select:focus {
   font-size: clamp(1.6rem, 2.6vw, 2.5rem);
   line-height: 1.2;
 }
-.muted {
-  color: var(--muted);
-}
+.muted { color: var(--muted); }
 
 .grid3 {
   display: grid;
@@ -591,20 +557,11 @@ select:focus {
   gap: 18px;
 }
 
-.feature {
-  padding: 18px;
-}
-.feature h3 {
-  margin: 6px 0 8px;
-}
-.feature p {
-  margin: 0;
-  color: var(--textSoft);
-}
+.feature { padding: 18px; }
+.feature h3 { margin: 6px 0 8px; }
+.feature p { margin: 0; color: var(--textSoft); }
 
-.listing {
-  overflow: hidden;
-}
+.listing { overflow: hidden; }
 .listing__img {
   display: block;
   width: 100%;
@@ -639,28 +596,27 @@ select:focus {
   transform: scale(1.03);
   filter: brightness(0.9) contrast(1.02) saturate(1);
 }
-.listing__body {
-  padding: 16px;
-}
+.listing__body { padding: 16px; }
+
 .badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(253, 192, 84, 0.12);
-  border: 1px solid rgba(253, 192, 84, 0.22);
+  background: rgba(246, 210, 122, 0.12);
+  border: 1px solid rgba(246, 210, 122, 0.22);
   color: var(--warm100);
   font-size: 0.85rem;
 }
 .section--light .badge {
-  background: rgba(249, 143, 52, 0.08);
-  border-color: rgba(249, 143, 52, 0.18);
+  background: rgba(234, 166, 74, 0.10);
+  border-color: rgba(234, 166, 74, 0.22);
   color: var(--warm200);
 }
-.section--light .listing__body {
-  padding: 18px;
-}
+.section--light .listing__body { padding: 18px; }
+
+/* OBS: você já corrigiu price com tokens abaixo; mantive compatível */
 .price {
   font-size: 1.2rem;
   font-weight: 800;
@@ -679,7 +635,7 @@ select:focus {
 .media {
   border-radius: var(--r24);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.10);
 }
 .media iframe,
 .media video {
@@ -696,29 +652,237 @@ select:focus {
   align-items: center;
   justify-content: space-between;
   gap: 14px;
+
+  /* toque premium */
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.04)
+  );
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: var(--shadow1);
 }
 .ctaBand p {
   margin: 0;
   color: var(--textSoft);
 }
 
-/* Footer */
+/* =========================================
+   Footer – LuxPrime (mais sofisticado)
+========================================= */
+
 .footer {
-  padding: 38px 0;
+  background: #070c16; /* mais profundo */
+  color: #e5e7eb;
+  padding: 64px 0 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  color: var(--muted);
+
+  /* leve “sheen” luxo */
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(246,210,122,0.10), transparent 42%),
+    radial-gradient(circle at 85% 0%, rgba(234,166,74,0.08), transparent 45%);
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr;
+  gap: 40px;
+}
+
+.footer__logo {
+  font-size: 1.2rem;
+  letter-spacing: 0.6px;
+  font-weight: 850;
+}
+
+.footer__brand p {
+  margin-top: 12px;
+  max-width: 420px;
+  color: rgba(255,255,255,0.76);
+  line-height: 1.65;
+}
+
+.footer__nav,
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__nav b,
+.footer__contact b {
+  margin-bottom: 8px;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.92);
+}
+
+.footer__nav a {
+  color: rgba(255, 255, 255, 0.74);
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer__nav a:hover {
+  color: var(--warm100);
+  transform: translateX(2px);
+}
+
+/* Social */
+.footer__social {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.footer__social a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+
+  box-shadow:
+    0 12px 26px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.10);
+
+  transition: background 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.footer__social a:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(246,210,122,0.22);
+  transform: translateY(-2px);
+}
+
+.footer__social svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Bottom */
+.footer__bottom {
+  margin-top: 48px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.62);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================
+   Footer developer link (.desenvolvedor)
+   Mantém classes existentes
+========================================= */
+
+.footer__bottom .desenvolvedor{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: rgba(255,255,255,0.82);
+  font-weight: 650;
+  letter-spacing: 0.2px;
+
+  padding: 2px 8px;
+  border-radius: 999px;
+
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.05);
+
+  transition:
+    transform var(--dur2) var(--easeOut),
+    background var(--dur2) var(--easeOut),
+    border-color var(--dur2) var(--easeOut),
+    box-shadow var(--dur2) var(--easeOut),
+    color var(--dur2) var(--easeOut);
+}
+
+/* underline “luxo” */
+.footer__bottom .desenvolvedor::after{
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 4px;
+
+  height: 1px;
+  border-radius: 99px;
+
+  background: linear-gradient(90deg, var(--warm100), var(--warm200));
+  opacity: 0;
+  transform: scaleX(0.7);
+  transform-origin: left;
+
+  transition:
+    opacity var(--dur2) var(--easeOut),
+    transform var(--dur2) var(--easeOut);
+}
+
+.footer__bottom .desenvolvedor:hover{
+  color: #ffffff;
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(246,210,122,0.22);
+
+  transform: translateY(-1px);
+  box-shadow:
+    0 14px 34px rgba(0,0,0,0.35),
+    0 0 0 6px rgba(246,210,122,0.10);
+}
+
+.footer__bottom .desenvolvedor:hover::after{
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* foco acessível (teclado) */
+.footer__bottom .desenvolvedor:focus-visible{
+  outline: none;
+  color: #ffffff;
+  border-color: rgba(246,210,122,0.45);
+  box-shadow:
+    0 0 0 6px rgba(246,210,122,0.14),
+    0 14px 34px rgba(0,0,0,0.35);
+}
+
+/* versão em seção clara, se você reutilizar footer__bottom em fundo branco */
+.section--light .footer__bottom .desenvolvedor{
+  color: rgba(0,0,0,0.70);
+  border-color: rgba(0,0,0,0.10);
+  background: rgba(0,0,0,0.04);
+}
+.section--light .footer__bottom .desenvolvedor:hover{
+  color: #0b0d12;
+  border-color: rgba(199,124,44,0.22);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.10), 0 0 0 6px rgba(199,124,44,0.08);
+}
+
+.footer__bottom .desenvolvedor::after{
+  display: none !important;
+  content: none !important;
+}
+
+
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 }
 
 /* ---------------- Animations ---------------- */
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 .reveal {
   opacity: 0;
@@ -730,39 +894,19 @@ select:focus {
 
 /* ---------------- Responsive ---------------- */
 @media (max-width: 980px) {
-  .hero__content {
-    grid-template-columns: 1fr;
-  }
-  .formRow {
-    grid-template-columns: 1fr;
-  }
-  .stats {
-    grid-template-columns: 1fr;
-  }
-  .grid3 {
-    grid-template-columns: 1fr;
-  }
-  .grid2 {
-    grid-template-columns: 1fr;
-  }
+  .hero__content { grid-template-columns: 1fr; }
+  .formRow { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr; }
+  .grid3 { grid-template-columns: 1fr; }
+  .grid2 { grid-template-columns: 1fr; }
   .media iframe,
-  .media video {
-    height: 260px;
-  }
-  .menu {
-    display: none;
-  }
-  .burger {
-    display: block;
-  }
-  .mobilePanel {
-    display: block;
-  }
+  .media video { height: 260px; }
+  .menu { display: none; }
+  .burger { display: block; }
+  .mobilePanel { display: block; }
 }
 @media (max-width: 600px) {
-  .h1 {
-    font-size: clamp(2rem, 5vw, 2.8rem);
-  }
+  .h1 { font-size: clamp(2rem, 5vw, 2.8rem); }
 }
 
 /* ===========================
@@ -808,8 +952,8 @@ select:focus {
 
 .hero__panel .cs__btn:focus{
   outline:none;
-  border-color: rgba(253,192,84,.55);
-  box-shadow: 0 0 0 6px rgba(253,192,84,.14);
+  border-color: rgba(246,210,122,.55);
+  box-shadow: 0 0 0 6px rgba(246,210,122,.14);
 }
 
 .hero__panel .cs__value{ font-size:.95rem; }
@@ -833,14 +977,14 @@ select:focus {
   padding:8px;
   border-radius:18px;
 
-  background: rgba(15,17,21,.92);
+  background: rgba(11,13,18,.92);
   border:1px solid rgba(255,255,255,.12);
-  box-shadow: 0 18px 60px rgba(0,0,0,.55);
+  box-shadow: 0 20px 70px rgba(0,0,0,.60);
 
   display:none;
   z-index:50;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .hero__panel .cs[data-open="true"] .cs__list{ display:block; }
@@ -868,8 +1012,8 @@ select:focus {
 }
 
 .hero__panel .cs__opt[aria-selected="true"]{
-  background: rgba(253,192,84,.12);
-  border-color: rgba(253,192,84,.22);
+  background: rgba(246,210,122,.12);
+  border-color: rgba(246,210,122,.22);
   color:#fff;
 }
 /* Remove seta antiga quando usar select custom */
@@ -878,12 +1022,12 @@ select:focus {
   display: none !important;
   content: none !important;
 }
+
 /* =========================================
    FIX: Custom selects no filtro de imoveis
    (apenas #imoveisFilterForm)
 ========================================= */
 
-/* remove seta antiga do wrapper nesses selects */
 #imoveisFilterForm .select-wrapper::after{
   display:none !important;
   content:none !important;
@@ -893,7 +1037,6 @@ select:focus {
   position: relative;
 }
 
-/* esconde o select real */
 #imoveisFilterForm .cs__native{
   position:absolute;
   inset:0;
@@ -901,7 +1044,6 @@ select:focus {
   pointer-events:none;
 }
 
-/* botão visual */
 #imoveisFilterForm .cs__btn{
   width:100%;
   display:flex;
@@ -929,15 +1071,14 @@ select:focus {
 
 #imoveisFilterForm .cs__btn:focus{
   outline:none;
-  border-color: rgba(253,192,84,.55);
-  box-shadow: 0 0 0 6px rgba(253,192,84,.14);
+  border-color: rgba(246,210,122,.55);
+  box-shadow: 0 0 0 6px rgba(246,210,122,.14);
 }
 
 #imoveisFilterForm .cs__value{
   font-size:.95rem;
 }
 
-/* caret */
 #imoveisFilterForm .cs__caret{
   width:14px;
   height:8px;
@@ -948,7 +1089,6 @@ select:focus {
   transition: transform 240ms cubic-bezier(.16,1,.3,1);
 }
 
-/* lista dropdown (começa fechada) */
 #imoveisFilterForm .cs__list{
   position:absolute;
   left:0; right:0;
@@ -956,25 +1096,19 @@ select:focus {
   padding:8px;
   border-radius:18px;
 
-  background: rgba(15,17,21,.92);
+  background: rgba(11,13,18,.92);
   border:1px solid rgba(255,255,255,.12);
-  box-shadow: 0 18px 60px rgba(0,0,0,.55);
+  box-shadow: 0 20px 70px rgba(0,0,0,.60);
 
-  display:none;              /* <- ESSENCIAL */
+  display:none;
   z-index:50;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
-#imoveisFilterForm .cs[data-open="true"] .cs__list{
-  display:block;             /* abre só quando data-open=true */
-}
+#imoveisFilterForm .cs[data-open="true"] .cs__list{ display:block; }
+#imoveisFilterForm .cs[data-open="true"] .cs__caret{ transform: rotate(180deg); }
 
-#imoveisFilterForm .cs[data-open="true"] .cs__caret{
-  transform: rotate(180deg);
-}
-
-/* opções */
 #imoveisFilterForm .cs__opt{
   width:100%;
   text-align:left;
@@ -996,12 +1130,11 @@ select:focus {
 }
 
 #imoveisFilterForm .cs__opt[aria-selected="true"]{
-  background: rgba(253,192,84,.12);
-  border-color: rgba(253,192,84,.22);
+  background: rgba(246,210,122,.12);
+  border-color: rgba(246,210,122,.22);
   color:#fff;
 }
 
-/* mobile: evita quebrar feio */
 @media (max-width: 980px){
   #imoveisFilterForm.formRow--4{
     grid-template-columns: 1fr;
@@ -1009,13 +1142,12 @@ select:focus {
 }
 
 #imoveisFilterForm { overflow: visible !important; }
-/* sobe o bloco inteiro de filtros */
+
 .card.reveal.card--pad.mt-14{
   position: relative;
   z-index: 50;
 }
-/* garante que o dropdown sempre fique acima */
-.card.reveal.card--pad.mt-14 { 
+.card.reveal.card--pad.mt-14 {
   position: relative;
   z-index: 50;
 }
@@ -1029,7 +1161,6 @@ select:focus {
    Só afeta .listing (cards de imóveis)
 ========================================================= */
 
-/* Tema padrão (página dark) */
 :root{
   --listing-bg: rgba(255,255,255,0.06);
   --listing-border: rgba(255,255,255,0.10);
@@ -1040,7 +1171,6 @@ select:focus {
   --listing-shadow: 0 18px 55px rgba(0,0,0,0.45);
 }
 
-/* Quando o card estiver dentro da seção clara (Home) */
 .section--light{
   --listing-bg: #ffffff;
   --listing-border: rgba(0,0,0,0.08);
@@ -1051,14 +1181,12 @@ select:focus {
   --listing-shadow: 0 18px 55px rgba(0,0,0,0.10);
 }
 
-/* Card base */
 .card.listing{
   background: var(--listing-bg);
   border: 1px solid var(--listing-border);
   box-shadow: var(--listing-shadow);
 }
 
-/* Body do card */
 .listing__body{
   padding: 18px;
 }
@@ -1067,7 +1195,6 @@ select:focus {
   margin-bottom: 10px;
 }
 
-/* Preço (corrige o seu problema do dark) */
 .price{
   color: var(--listing-price);
   font-size: 1.22rem;
@@ -1076,26 +1203,22 @@ select:focus {
   margin: 10px 0 6px;
 }
 
-/* Texto meta (local, quartos, m²) */
 .meta{
   color: var(--listing-meta);
   font-size: 0.95rem;
   line-height: 1.35;
 }
 
-/* (Opcional) pequena linha separadora elegante */
 .listing__body .action-row{
   margin-top: 14px;
   padding-top: 14px;
   border-top: 1px solid color-mix(in srgb, var(--listing-border), transparent 35%);
 }
 
-/* Hover do card fica consistente nos 2 temas */
 .card.listing:hover{
   border-color: color-mix(in srgb, var(--warm100), var(--listing-border) 55%);
 }
 
-/* Imagem: contraste melhor no dark e no light */
 .listing__img img{
   filter: brightness(0.92) contrast(1.02) saturate(0.98);
 }
@@ -1109,8 +1232,8 @@ select:focus {
   display: none !important;
   content: none !important;
 }
-/* Faz o custom select ocupar 100% dentro do form */
 .form-stack .cs__btn { width: 100%; }
+
 /* =========================================
    FIX Custom Select no formulário de contato
    (somente #contatoForm)
@@ -1118,13 +1241,11 @@ select:focus {
 
 #contatoForm .cs{ position:relative; }
 
-/* remove seta antiga do wrapper (se existir) */
 #contatoForm .select-wrapper::after{
   display:none !important;
   content:none !important;
 }
 
-/* esconde o select nativo real */
 #contatoForm .cs__native{
   position:absolute;
   inset:0;
@@ -1132,7 +1253,6 @@ select:focus {
   pointer-events:none;
 }
 
-/* botão visual */
 #contatoForm .cs__btn{
   width:100%;
   display:flex;
@@ -1160,11 +1280,10 @@ select:focus {
 
 #contatoForm .cs__btn:focus{
   outline:none;
-  border-color: rgba(253,192,84,.55);
-  box-shadow: 0 0 0 6px rgba(253,192,84,.14);
+  border-color: rgba(246,210,122,.55);
+  box-shadow: 0 0 0 6px rgba(246,210,122,.14);
 }
 
-/* caret */
 #contatoForm .cs__caret{
   width:14px;
   height:8px;
@@ -1175,7 +1294,6 @@ select:focus {
   transition: transform var(--dur2) var(--easeOut);
 }
 
-/* dropdown: começa fechado */
 #contatoForm .cs__list{
   position:absolute;
   left:0; right:0;
@@ -1183,20 +1301,19 @@ select:focus {
   padding:8px;
   border-radius:18px;
 
-  background: rgba(15,17,21,.92);
+  background: rgba(11,13,18,.92);
   border:1px solid rgba(255,255,255,.12);
-  box-shadow: 0 18px 60px rgba(0,0,0,.55);
+  box-shadow: 0 20px 70px rgba(0,0,0,.60);
 
-  display:none;              /* <- ESSENCIAL */
+  display:none;
   z-index:9999;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 #contatoForm .cs[data-open="true"] .cs__list{ display:block; }
 #contatoForm .cs[data-open="true"] .cs__caret{ transform: rotate(180deg); }
 
-/* opções */
 #contatoForm .cs__opt{
   width:100%;
   text-align:left;
@@ -1218,9 +1335,141 @@ select:focus {
 }
 
 #contatoForm .cs__opt[aria-selected="true"]{
-  background: rgba(253,192,84,.12);
-  border-color: rgba(253,192,84,.22);
+  background: rgba(246,210,122,.12);
+  border-color: rgba(246,210,122,.22);
   color:#fff;
 }
-/* deixa placeholder com cara de placeholder */
+
 .cs__value.is-placeholder { opacity: .72; }
+
+/* =========================================
+   WhatsApp Floating Button – LuxPrime
+   (premium finishing)
+========================================= */
+
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(145deg, #25d366, #1ebe5d);
+  color: #ffffff;
+
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.42),
+    0 0 0 6px rgba(37, 211, 102, 0.16),
+    inset 0 1px 0 rgba(255,255,255,0.22);
+
+  border: 1px solid rgba(255, 255, 255, 0.32);
+
+  cursor: pointer;
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus-visible {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow:
+    0 20px 44px rgba(0, 0, 0, 0.52),
+    0 0 0 8px rgba(37, 211, 102, 0.22),
+    inset 0 1px 0 rgba(255,255,255,0.26);
+  filter: brightness(1.06);
+}
+
+.whatsapp-float svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+/* Tooltip */
+.whatsapp-float::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: 70px;
+  bottom: 50%;
+  transform: translateY(50%) translateX(6px);
+
+  background: #0b0d12;
+  color: #ffffff;
+
+  padding: 8px 12px;
+  border-radius: 10px;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 16px 46px rgba(0, 0, 0, 0.50);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.whatsapp-float:hover::after {
+  opacity: 1;
+  transform: translateY(50%) translateX(0);
+}
+
+/* attention pulse */
+.whatsapp-float.attention {
+  animation: pulse-wa 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse-wa {
+  0% {
+    box-shadow:
+      0 14px 34px rgba(0, 0, 0, 0.42),
+      0 0 0 0 rgba(37, 211, 102, 0.42),
+      inset 0 1px 0 rgba(255,255,255,0.22);
+  }
+  70% {
+    box-shadow:
+      0 20px 44px rgba(0, 0, 0, 0.52),
+      0 0 0 14px rgba(37, 211, 102, 0),
+      inset 0 1px 0 rgba(255,255,255,0.22);
+  }
+  100% {
+    box-shadow:
+      0 14px 34px rgba(0, 0, 0, 0.42),
+      0 0 0 0 rgba(37, 211, 102, 0),
+      inset 0 1px 0 rgba(255,255,255,0.22);
+  }
+}
+
+/* Mobile ajustes */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .whatsapp-float::after {
+    display: none;
+  }
+}
+/* Header quando rola a página */
+.header.is-scrolled {
+  background: rgba(15, 17, 21, 0.92);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.55);
+  border-bottom-color: rgba(253, 192, 84, 0.22);
+}
