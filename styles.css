@@ -636,7 +636,7 @@ select:focus {
   font-size: 1.2rem;
   font-weight: 800;
   margin: 10px 0 4px;
-  color: var(--warm300);
+  color: var(--bg);
 }
 .meta {
   display: flex;
