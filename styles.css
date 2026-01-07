@@ -1620,3 +1620,34 @@ select:focus {
 .btn, .burger, .mobilePanel a, .footer__social a{
   -webkit-tap-highlight-color: transparent;
 }
+/* =========================================
+   FIX — Botões do FOOTER no mobile
+   (mantém hero grande, footer elegante)
+========================================= */
+@media (max-width: 600px){
+
+  /* ❌ footer NÃO herda botões grandes */
+  .footer .btn{
+    width: auto;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    border-radius: 999px;
+  }
+
+  /* botões sociais do footer menores */
+  .footer__social a{
+    width: 34px;
+    height: 34px;
+  }
+
+  .footer__social svg{
+    width: 16px;
+    height: 16px;
+  }
+
+  /* evita quebra feia de linha */
+  .footer__social{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
