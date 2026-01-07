@@ -55,15 +55,24 @@
             </p>
           </div>
 
-          <div class="grid2" style="margin-top: 18px">
+          <div class="grid2 mt-18">
             <!-- Form -->
             <div class="card feature reveal hover-lift">
               <h3>Envie sua solicitação</h3>
               <p class="muted">Preencha e retornamos em até 24h úteis.</p>
-
-              <form style="margin-top: 12px; display: grid; gap: 10px">
-                <input class="input" placeholder="Seu nome" required />
-                <input class="input" placeholder="Seu WhatsApp" required />
+              <form class="mt-12 form-stack">
+                <input
+                  class="input"
+                  placeholder="Seu nome"
+                  required
+                  type="text"
+                />
+                <input
+                  class="input"
+                  placeholder="Seu WhatsApp"
+                  required
+                  type="text"
+                />
                 <input class="input" placeholder="Seu e-mail" type="email" />
                 <select>
                   <option>Objetivo</option>
@@ -72,15 +81,13 @@
                   <option>Investir</option>
                 </select>
                 <textarea
-                  class="input"
+                  class="input textarea--tall"
                   placeholder="Conte o que você procura (bairro, quartos, faixa, prazo)"
-                  style="border-radius: 18px; min-height: 120px; padding: 14px"
                 ></textarea>
                 <button class="btn btn--cta" type="submit">
                   Quero atendimento
                 </button>
-
-                <p class="muted" style="margin: 0">
+                <p class="muted">
                   Ao enviar, você concorda em receber contato da LuxPrime.
                 </p>
               </form>
@@ -95,7 +102,7 @@
                   <p class="muted">
                     Se for urgente, você pode chamar no WhatsApp.
                   </p>
-                  <div style="margin-top: 12px">
+                  <div class="mt-12">
                     <a class="btn btn--cta" href="#">Chamar no WhatsApp</a>
                   </div>
                 </div>
@@ -106,7 +113,7 @@
                   <p class="muted">
                     Tratamos dados e negociações com máxima discrição.
                   </p>
-                  <div style="margin-top: 12px">
+                  <div class="mt-12">
                     <a class="btn" href="sobre.html">Entender como funciona</a>
                   </div>
                 </div>
@@ -117,7 +124,7 @@
                   <p class="muted">
                     Receba 3 opções reais dentro do seu perfil.
                   </p>
-                  <div style="margin-top: 12px">
+                  <div class="mt-12">
                     <a class="btn btn--cta" href="imoveis.html">Ver catálogo</a>
                   </div>
                 </div>
@@ -128,14 +135,14 @@
                   <p class="muted">
                     Organizamos agenda e roteiro com antecedência.
                   </p>
-                  <div style="margin-top: 12px">
+                  <div class="mt-12">
                     <a class="btn" href="contato.html">Agendar visita</a>
                   </div>
                 </div>
               </div>
 
               <!-- Mapa / imagem / vídeo -->
-              <div class="media hover-lift" style="margin-top: 18px">
+              <div class="media hover-lift mt-18">
                 <!-- Troque por Google Maps embed ou vídeo institucional -->
                 <iframe
                   src="https://www.youtube.com/embed/ScMzIvxBSi4"
@@ -147,12 +154,10 @@
             </div>
           </div>
 
-          <div class="reveal" style="margin-top: 22px">
+          <div class="reveal mt-22">
             <div class="ctaBand card">
               <div>
-                <b style="font-size: 1.05rem"
-                  >Quer uma curadoria personalizada?</b
-                >
+                <b class="ctaBand__title">Quer uma curadoria personalizada?</b>
                 <p class="muted">
                   Diga seu perfil e enviamos oportunidades dentro do seu
                   objetivo.
