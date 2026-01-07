@@ -63,7 +63,7 @@
             <div class="card feature reveal hover-lift">
               <h3>Envie sua solicitação</h3>
               <p class="muted">Preencha e retornamos em até 24h úteis.</p>
-              <form class="mt-12 form-stack">
+              <form class="mt-12 form-stack" id="contatoForm">
                 <input
                   class="input"
                   placeholder="Seu nome"
@@ -77,18 +77,36 @@
                   type="text"
                 />
                 <input class="input" placeholder="Seu e-mail" type="email" />
-                <select>
-                  <option>Objetivo</option>
-                  <option>Comprar</option>
-                  <option>Alugar</option>
-                  <option>Investir</option>
-                </select>
+                <div class="select-wrapper cs" data-cs>
+  <!-- select real (envia no form) -->
+<select name="objetivo" class="cs__native" aria-label="Objetivo" required>
+  <option value="" selected disabled hidden>Objetivo</option>
+  <option value="Comprar">Comprar</option>
+  <option value="Alugar">Alugar</option>
+  <option value="Investir">Investir</option>
+</select>
+
+
+  <!-- botão visual -->
+  <button type="button" class="cs__btn" aria-haspopup="listbox" aria-expanded="false">
+    <span class="cs__value">Objetivo</span>
+    <span class="cs__caret" aria-hidden="true"></span>
+  </button>
+
+  <!-- lista -->
+  <div class="cs__list" role="listbox">
+  <button type="button" class="cs__opt" role="option" data-value="Comprar" aria-selected="false">Comprar</button>
+  <button type="button" class="cs__opt" role="option" data-value="Alugar" aria-selected="false">Alugar</button>
+  <button type="button" class="cs__opt" role="option" data-value="Investir" aria-selected="false">Investir</button>
+</div>
+</div>
+
                 <textarea
                   class="input textarea--tall"
                   placeholder="Conte o que você procura (bairro, quartos, faixa, prazo)"
                 ></textarea>
                 <button class="btn btn--cta" type="submit">
-                  Quero atendimento
+                  Falar com a LuxPrime
                 </button>
                 <p class="muted">
                   Ao enviar, você concorda em receber contato da LuxPrime.
@@ -147,12 +165,7 @@
               <!-- Mapa / imagem / vídeo -->
               <div class="media hover-lift mt-18">
                 <!-- Troque por Google Maps embed ou vídeo institucional -->
-                <iframe
-                  src="https://www.youtube.com/embed/ScMzIvxBSi4"
-                  title="Mapa ou vídeo"
-                  allowfullscreen
-                >
-                </iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/87-vHCP4biI?si=9UuUBjbq1Y8GRkfH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
             </div>
           </div>

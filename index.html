@@ -99,9 +99,8 @@
         <div class="hero__bg" aria-hidden="true"></div>
         <div class="container hero__content">
           <div class="reveal">
-            <span class="pill">
-              Seleção personalizada • Atendimento humano</span
-            >
+            <span class="pill">• Imóveis exclusivos | • Atendimento personalizado</span>
+
             <h1 class="h1">Imóveis exclusivos para clientes exigentes.</h1>
             <p>
               Se você busca mais do que um imóvel, você está no lugar certo.
@@ -137,7 +136,8 @@
                 <div class="select-wrapper cs" data-cs>
                   <!-- select real (mantém name/value pro seu JS) -->
                   <select name="tipo" aria-label="Tipo" class="cs__native">
-                    <option value="Apartamento" selected>Apartamento</option>
+                    <option value="" selected disabled hidden>Tipo</option>
+                    <option value="Apartamento">Apartamento</option>
                     <option value="Casa">Casa</option>
                     <option value="Cobertura">Cobertura</option>
                     <option value="Comercial">Comercial</option>
@@ -150,7 +150,7 @@
                     aria-haspopup="listbox"
                     aria-expanded="false"
                   >
-                    <span class="cs__value">Apartamento</span>
+                    <span class="cs__value">Selecione o imóvel</span>
                     <span class="cs__caret" aria-hidden="true"></span>
                   </button>
 
@@ -195,8 +195,8 @@
                 </div>
 
                 <div class="select-wrapper cs" data-cs>
-                  <select name="bairro" aria-label="Região" class="cs__native">
-                    <option value="" selected>Selecione a região</option>
+                  <select name="bairro" aria-label="Selecione a Região" class="cs__native">
+                    <option value="" selected disabled hidden>Selecione a região</option>
                     <option value="Zona Sul">Zona Sul</option>
                     <option value="Barra da Tijuca">Barra da Tijuca</option>
                     <option value="Recreio">Recreio</option>
