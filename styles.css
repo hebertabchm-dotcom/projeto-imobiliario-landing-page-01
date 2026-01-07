@@ -1688,3 +1688,37 @@ select:focus {
     height: 15px;
   }
 }
+/* =========================================
+   Footer bottom — ajuste MOBILE
+========================================= */
+@media (max-width: 600px){
+  .footer__bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    text-align: center;
+    line-height: 1.4;
+
+    padding-top: 18px;
+  }
+
+  .footer__bottom small{
+    font-size: 0.78rem;
+    opacity: 0.75;
+  }
+
+  .footer__bottom .desenvolvedor{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    font-weight: 500;
+    color: rgba(255,255,255,0.85);
+
+    text-decoration: none; /* garante sem underline */
+  }
+}
+.footer__bottom .desenvolvedor:hover{
+  color: var(--warm100);
+}
