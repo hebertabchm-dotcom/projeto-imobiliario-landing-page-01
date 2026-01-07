@@ -45,6 +45,7 @@
 }
 html,
 body {
+   padding-top: 80px;
   height: 100%;
 }
 body {
@@ -56,6 +57,20 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+body {
+  padding-top: 5px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 10px;
+  }
+}
+
+main {
+   padding-top: 5px;
+  overflow: hidden;
 }
 
 /* Skip link (a11y) */
