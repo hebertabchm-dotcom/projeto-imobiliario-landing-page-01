@@ -177,15 +177,15 @@ img {
   letter-spacing: 0.2px;
 }
 .brand__mark {
-  width: 36px;
-  height: 36px;
-  border-radius: 12px;
-  background: radial-gradient(
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  /*background: radial-gradient(
     circle at 30% 30%,
     rgba(253, 192, 84, 0.55),
     rgba(249, 143, 52, 0.12) 60%,
     rgba(255, 255, 255, 0.06)
-  );
+  );/*/
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
 }

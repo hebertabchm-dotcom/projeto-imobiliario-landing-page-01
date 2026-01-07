@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Imóveis — LuxPrime</title>
     <link rel="stylesheet" href="styles.css" />
+     <link rel="icon" type="image/x-icon" href="assets/img/lar.png" />
   </head>
   <body>
     <header class="header">
       <div class="container">
         <div class="nav">
           <a class="brand" href="index.html"
-            ><span class="brand__mark"></span><span>LuxPrime</span></a
+            ><span class="brand__mark">
+               <img src="assets/img/lar.png" alt="logo LuxPrime" width="40" height="40"/>
+            </span><span>LuxPrime</span></a
           >
 
           <nav class="menu">
@@ -56,77 +59,189 @@
           </div>
 
           <div class="card reveal card--pad mt-14">
-  <form class="formRow formRow--4" id="imoveisFilterForm">
-    <!-- Tipo -->
-    <div class="select-wrapper cs" data-cs>
-      <select name="tipo" class="cs__native" aria-label="Tipo">
-        <option value="" selected>Tipo</option>
-        <option value="Apartamento">Apartamento</option>
-        <option value="Casa">Casa</option>
-        <option value="Cobertura">Cobertura</option>
-      </select>
+            <form class="formRow formRow--4" id="imoveisFilterForm">
+              <!-- Tipo -->
+              <div class="select-wrapper cs" data-cs>
+                <select name="tipo" class="cs__native" aria-label="Tipo">
+                  <option value="" selected>Tipo</option>
+                  <option value="Apartamento">Apartamento</option>
+                  <option value="Casa">Casa</option>
+                  <option value="Cobertura">Cobertura</option>
+                </select>
 
-      <button type="button" class="cs__btn" aria-haspopup="listbox" aria-expanded="false">
-        <span class="cs__value">Tipo</span>
-        <span class="cs__caret" aria-hidden="true"></span>
-      </button>
+                <button
+                  type="button"
+                  class="cs__btn"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                >
+                  <span class="cs__value">Tipo</span>
+                  <span class="cs__caret" aria-hidden="true"></span>
+                </button>
 
-      <div class="cs__list" role="listbox">
-        <button type="button" class="cs__opt" role="option" data-value="" aria-selected="true">Tipo</button>
-        <button type="button" class="cs__opt" role="option" data-value="Apartamento" aria-selected="false">Apartamento</button>
-        <button type="button" class="cs__opt" role="option" data-value="Casa" aria-selected="false">Casa</button>
-        <button type="button" class="cs__opt" role="option" data-value="Cobertura" aria-selected="false">Cobertura</button>
-      </div>
-    </div>
+                <div class="cs__list" role="listbox">
+                  <button
+                    type="button"
+                    class="cs__opt"
+                    role="option"
+                    data-value=""
+                    aria-selected="true"
+                  >
+                    Tipo
+                  </button>
+                  <button
+                    type="button"
+                    class="cs__opt"
+                    role="option"
+                    data-value="Apartamento"
+                    aria-selected="false"
+                  >
+                    Apartamento
+                  </button>
+                  <button
+                    type="button"
+                    class="cs__opt"
+                    role="option"
+                    data-value="Casa"
+                    aria-selected="false"
+                  >
+                    Casa
+                  </button>
+                  <button
+                    type="button"
+                    class="cs__opt"
+                    role="option"
+                    data-value="Cobertura"
+                    aria-selected="false"
+                  >
+                    Cobertura
+                  </button>
+                </div>
+              </div>
 
-    <!-- Região -->
-    <div class="select-wrapper cs" data-cs>
-      <select name="regiao" class="cs__native" aria-label="Região">
-        <option value="" selected>Região</option>
-        <option value="Zona Sul">Zona Sul</option>
-        <option value="Barra">Barra</option>
-        <option value="Recreio">Recreio</option>
-      </select>
+              <!-- Região -->
+              <div class="select-wrapper cs" data-cs>
+                <select name="regiao" class="cs__native" aria-label="Região">
+                  <option value="" selected>Região</option>
+                  <option value="Zona Sul">Zona Sul</option>
+                  <option value="Barra">Barra</option>
+                  <option value="Recreio">Recreio</option>
+                </select>
 
-      <button type="button" class="cs__btn" aria-haspopup="listbox" aria-expanded="false">
-        <span class="cs__value">Região</span>
-        <span class="cs__caret" aria-hidden="true"></span>
-      </button>
+                <button
+                  type="button"
+                  class="cs__btn"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                >
+                  <span class="cs__value">Região</span>
+                  <span class="cs__caret" aria-hidden="true"></span>
+                </button>
 
-      <div class="cs__list" role="listbox">
-        <button type="button" class="cs__opt" role="option" data-value="" aria-selected="true">Região</button>
-        <button type="button" class="cs__opt" role="option" data-value="Zona Sul" aria-selected="false">Zona Sul</button>
-        <button type="button" class="cs__opt" role="option" data-value="Barra" aria-selected="false">Barra</button>
-        <button type="button" class="cs__opt" role="option" data-value="Recreio" aria-selected="false">Recreio</button>
-      </div>
-    </div>
+                <div class="cs__list" role="listbox">
+                  <button
+                    type="button"
+                    class="cs__opt"
+                    role="option"
+                    data-value=""
+                    aria-selected="true"
+                  >
+                    Região
+                  </button>
+                  <button
+                    type="button"
+                    class="cs__opt"
+                    role="option"
+                    data-value="Zona Sul"
+                    aria-selected="false"
+                  >
+                    Zona Sul
+                  </button>
+                  <button
+                    type="button"
+                    class="cs__opt"
+                    role="option"
+                    data-value="Barra"
+                    aria-selected="false"
+                  >
+                    Barra
+                  </button>
+                  <button
+                    type="button"
+                    class="cs__opt"
+                    role="option"
+                    data-value="Recreio"
+                    aria-selected="false"
+                  >
+                    Recreio
+                  </button>
+                </div>
+              </div>
 
-    <!-- Faixa -->
-    <div class="select-wrapper cs" data-cs>
-      <select name="faixa" class="cs__native" aria-label="Faixa">
-        <option value="" selected>Faixa</option>
-        <option value="Até 500k">Até 500k</option>
-        <option value="500k–1M">500k–1M</option>
-        <option value="+1M">+1M</option>
-      </select>
+              <!-- Faixa -->
+              <div class="select-wrapper cs" data-cs>
+                <select name="faixa" class="cs__native" aria-label="Faixa">
+                  <option value="" selected>Faixa</option>
+                  <option value="Até 500k">Até 500k</option>
+                  <option value="500k–1M">500k–1M</option>
+                  <option value="+1M">+1M</option>
+                </select>
 
-      <button type="button" class="cs__btn" aria-haspopup="listbox" aria-expanded="false">
-        <span class="cs__value">Faixa</span>
-        <span class="cs__caret" aria-hidden="true"></span>
-      </button>
+                <button
+                  type="button"
+                  class="cs__btn"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                >
+                  <span class="cs__value">Faixa</span>
+                  <span class="cs__caret" aria-hidden="true"></span>
+                </button>
 
-      <div class="cs__list" role="listbox">
-        <button type="button" class="cs__opt" role="option" data-value="" aria-selected="true">Faixa</button>
-        <button type="button" class="cs__opt" role="option" data-value="Até 500k" aria-selected="false">Até 500k</button>
-        <button type="button" class="cs__opt" role="option" data-value="500k–1M" aria-selected="false">500k–1M</button>
-        <button type="button" class="cs__opt" role="option" data-value="+1M" aria-selected="false">+1M</button>
-      </div>
-    </div>
+                <div class="cs__list" role="listbox">
+                  <button
+                    type="button"
+                    class="cs__opt"
+                    role="option"
+                    data-value=""
+                    aria-selected="true"
+                  >
+                    Faixa
+                  </button>
+                  <button
+                    type="button"
+                    class="cs__opt"
+                    role="option"
+                    data-value="Até 500k"
+                    aria-selected="false"
+                  >
+                    Até 500k
+                  </button>
+                  <button
+                    type="button"
+                    class="cs__opt"
+                    role="option"
+                    data-value="500k–1M"
+                    aria-selected="false"
+                  >
+                    500k–1M
+                  </button>
+                  <button
+                    type="button"
+                    class="cs__opt"
+                    role="option"
+                    data-value="+1M"
+                    aria-selected="false"
+                  >
+                    +1M
+                  </button>
+                </div>
+              </div>
 
-    <button type="submit" class="btn btn--cta">Receber seleção personalizada</button>
-  </form>
-</div>
-
+              <button type="submit" class="btn btn--cta">
+                Receber seleção personalizada
+              </button>
+            </form>
+          </div>
 
           <!-- lista -->
           <div id="lista" class="grid3 mt-18">
@@ -196,7 +311,7 @@
                 </p>
               </div>
               <a class="btn btn--cta" href="contato.html"
-                >Quero um especialista</a
+                >Solicitar recomendações</a
               >
             </div>
           </div>
@@ -206,7 +321,7 @@
 
     <footer class="footer">
       <div class="container footer__container">
-          <div>
+        <div>
           <b>LuxPrime</b>
           <div class="muted">Seleção • Confiança • Resultado</div>
         </div>

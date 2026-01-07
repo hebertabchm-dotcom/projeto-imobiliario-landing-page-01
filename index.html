@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
       content="LuxPrime — Imóveis exclusivos com seleção personalizada, atendimento consultivo e suporte completo do primeiro contato ao fechamento. Agende visita ou peça acompanhamento completo."
-    >
+    />
     <title>LuxPrime Imóveis — Exclusivos para clientes exigentes</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="assets/img/lar.png" />
     <!-- Open Graph / Twitter -->
     <meta
       property="og:title"
       content="LuxPrime Imóveis — Exclusivos para clientes exigentes"
-    >
+    />
     <meta
       property="og:description"
       content="Imóveis exclusivos com seleção personalizada, atendimento consultivo e tours virtuais. Peça acompanhamento completo ou agende visita."
-    >
-    <meta property="og:image" content="assets/img/cobertura-1400.jpg">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
+    />
+    <meta property="og:image" content="assets/img/cobertura-1400.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
       content="LuxPrime Imóveis — Exclusivos para clientes exigentes"
-    >
+    />
     <meta
       name="twitter:description"
       content="Imóveis exclusivos com seleção personalizada, atendimento consultivo e tours virtuais."
-    >
-    <meta name="twitter:image" content="assets/img/cobertura-1400.jpg">
+    />
+    <meta name="twitter:image" content="assets/img/cobertura-1400.jpg" />
 
     <!-- JSON-LD (Organization + WebSite) -->
     <script type="application/ld+json">
@@ -57,7 +58,9 @@
       <div class="container">
         <div class="nav">
           <a class="brand" href="index.html">
-            <span class="brand__mark" aria-hidden="true"></span>
+            
+            <span class="brand__mark" aria-hidden="true"> 
+            <img src="assets/img/lar.png" alt="logo LuxPrime" width="40" height="40"/> </span>
             <span>LuxPrime</span>
           </a>
 
@@ -96,7 +99,9 @@
         <div class="hero__bg" aria-hidden="true"></div>
         <div class="container hero__content">
           <div class="reveal">
-            <span class="pill"> Seleção personalizada • Atendimento humano</span>
+            <span class="pill">
+              Seleção personalizada • Atendimento humano</span
+            >
             <h1 class="h1">Imóveis exclusivos para clientes exigentes.</h1>
             <p>
               Se você busca mais do que um imóvel, você está no lugar certo.
@@ -130,77 +135,207 @@
             <form id="heroSearchForm">
               <div class="formRow">
                 <div class="select-wrapper cs" data-cs>
-  <!-- select real (mantém name/value pro seu JS) -->
-  <select name="tipo" aria-label="Tipo" class="cs__native">
-    <option value="Apartamento" selected>Apartamento</option>
-    <option value="Casa">Casa</option>
-    <option value="Cobertura">Cobertura</option>
-    <option value="Comercial">Comercial</option>
-  </select>
+                  <!-- select real (mantém name/value pro seu JS) -->
+                  <select name="tipo" aria-label="Tipo" class="cs__native">
+                    <option value="Apartamento" selected>Apartamento</option>
+                    <option value="Casa">Casa</option>
+                    <option value="Cobertura">Cobertura</option>
+                    <option value="Comercial">Comercial</option>
+                  </select>
 
-  <!-- select visual -->
-  <button type="button" class="cs__btn" aria-haspopup="listbox" aria-expanded="false">
-    <span class="cs__value">Apartamento</span>
-    <span class="cs__caret" aria-hidden="true"></span>
-  </button>
+                  <!-- select visual -->
+                  <button
+                    type="button"
+                    class="cs__btn"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                  >
+                    <span class="cs__value">Apartamento</span>
+                    <span class="cs__caret" aria-hidden="true"></span>
+                  </button>
 
-  <div class="cs__list" role="listbox">
-    <button type="button" class="cs__opt" role="option" data-value="Apartamento" aria-selected="true">Apartamento</button>
-    <button type="button" class="cs__opt" role="option" data-value="Casa" aria-selected="false">Casa</button>
-    <button type="button" class="cs__opt" role="option" data-value="Cobertura" aria-selected="false">Cobertura</button>
-    <button type="button" class="cs__opt" role="option" data-value="Comercial" aria-selected="false">Comercial</button>
-  </div>
-</div>
+                  <div class="cs__list" role="listbox">
+                    <button
+                      type="button"
+                      class="cs__opt"
+                      role="option"
+                      data-value="Apartamento"
+                      aria-selected="true"
+                    >
+                      Apartamento
+                    </button>
+                    <button
+                      type="button"
+                      class="cs__opt"
+                      role="option"
+                      data-value="Casa"
+                      aria-selected="false"
+                    >
+                      Casa
+                    </button>
+                    <button
+                      type="button"
+                      class="cs__opt"
+                      role="option"
+                      data-value="Cobertura"
+                      aria-selected="false"
+                    >
+                      Cobertura
+                    </button>
+                    <button
+                      type="button"
+                      class="cs__opt"
+                      role="option"
+                      data-value="Comercial"
+                      aria-selected="false"
+                    >
+                      Comercial
+                    </button>
+                  </div>
+                </div>
 
                 <div class="select-wrapper cs" data-cs>
-  <select name="bairro" aria-label="Região" class="cs__native">
-    <option value="" selected>Selecione a região</option>
-    <option value="Zona Sul">Zona Sul</option>
-    <option value="Barra da Tijuca">Barra da Tijuca</option>
-    <option value="Recreio">Recreio</option>
-    <option value="Centro">Centro</option>
-    <option value="Niterói">Niterói</option>
-  </select>
+                  <select name="bairro" aria-label="Região" class="cs__native">
+                    <option value="" selected>Selecione a região</option>
+                    <option value="Zona Sul">Zona Sul</option>
+                    <option value="Barra da Tijuca">Barra da Tijuca</option>
+                    <option value="Recreio">Recreio</option>
+                    <option value="Centro">Centro</option>
+                    <option value="Niterói">Niterói</option>
+                  </select>
 
-  <button type="button" class="cs__btn" aria-haspopup="listbox" aria-expanded="false">
-    <span class="cs__value">Selecione a região</span>
-    <span class="cs__caret" aria-hidden="true"></span>
-  </button>
+                  <button
+                    type="button"
+                    class="cs__btn"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                  >
+                    <span class="cs__value">Selecione a região</span>
+                    <span class="cs__caret" aria-hidden="true"></span>
+                  </button>
 
-  <div class="cs__list" role="listbox">
-    <button type="button" class="cs__opt" role="option" data-value="" aria-selected="true">Selecione a região</button>
-    <button type="button" class="cs__opt" role="option" data-value="Zona Sul" aria-selected="false">Zona Sul</button>
-    <button type="button" class="cs__opt" role="option" data-value="Barra da Tijuca" aria-selected="false">Barra da Tijuca</button>
-    <button type="button" class="cs__opt" role="option" data-value="Recreio" aria-selected="false">Recreio</button>
-    <button type="button" class="cs__opt" role="option" data-value="Centro" aria-selected="false">Centro</button>
-    <button type="button" class="cs__opt" role="option" data-value="Niterói" aria-selected="false">Niterói</button>
-  </div>
-</div>
-
+                  <div class="cs__list" role="listbox">
+                    <button
+                      type="button"
+                      class="cs__opt"
+                      role="option"
+                      data-value=""
+                      aria-selected="true"
+                    >
+                      Selecione a região
+                    </button>
+                    <button
+                      type="button"
+                      class="cs__opt"
+                      role="option"
+                      data-value="Zona Sul"
+                      aria-selected="false"
+                    >
+                      Zona Sul
+                    </button>
+                    <button
+                      type="button"
+                      class="cs__opt"
+                      role="option"
+                      data-value="Barra da Tijuca"
+                      aria-selected="false"
+                    >
+                      Barra da Tijuca
+                    </button>
+                    <button
+                      type="button"
+                      class="cs__opt"
+                      role="option"
+                      data-value="Recreio"
+                      aria-selected="false"
+                    >
+                      Recreio
+                    </button>
+                    <button
+                      type="button"
+                      class="cs__opt"
+                      role="option"
+                      data-value="Centro"
+                      aria-selected="false"
+                    >
+                      Centro
+                    </button>
+                    <button
+                      type="button"
+                      class="cs__opt"
+                      role="option"
+                      data-value="Niterói"
+                      aria-selected="false"
+                    >
+                      Niterói
+                    </button>
+                  </div>
+                </div>
               </div>
               <div class="formRow mt-10">
                 <div class="select-wrapper cs" data-cs>
-  <!-- select real (mantém name/value pro seu JS) -->
-  <select name="faixa" aria-label="Faixa de valor" class="cs__native">
-    <option value="Até 500k" selected>Até R$ 500 mil</option>
-    <option value="500k-1M">R$ 500k a R$ 1M</option>
-    <option value="1M-3M">R$ 1M a R$ 3M</option>
-    <option value="+3M">Acima de R$ 3M</option>
-  </select>
+                  <!-- select real (mantém name/value pro seu JS) -->
+                  <select
+                    name="faixa"
+                    aria-label="Faixa de valor"
+                    class="cs__native"
+                  >
+                    <option value="Até 500k" selected>Até R$ 500 mil</option>
+                    <option value="500k-1M">R$ 500k a R$ 1M</option>
+                    <option value="1M-3M">R$ 1M a R$ 3M</option>
+                    <option value="+3M">Acima de R$ 3M</option>
+                  </select>
 
-  <!-- select visual -->
-  <button type="button" class="cs__btn" aria-haspopup="listbox" aria-expanded="false">
-    <span class="cs__value">Até R$ 500 mil</span>
-    <span class="cs__caret" aria-hidden="true"></span>
-  </button>
+                  <!-- select visual -->
+                  <button
+                    type="button"
+                    class="cs__btn"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                  >
+                    <span class="cs__value">Até R$ 500 mil</span>
+                    <span class="cs__caret" aria-hidden="true"></span>
+                  </button>
 
-  <div class="cs__list" role="listbox">
-    <button type="button" class="cs__opt" role="option" data-value="Até 500k" aria-selected="true">Até R$ 500 mil</button>
-    <button type="button" class="cs__opt" role="option" data-value="500k-1M" aria-selected="false">R$ 500k a R$ 1M</button>
-    <button type="button" class="cs__opt" role="option" data-value="1M-3M" aria-selected="false">R$ 1M a R$ 3M</button>
-    <button type="button" class="cs__opt" role="option" data-value="+3M" aria-selected="false">Acima de R$ 3M</button>
-  </div>
-</div>
+                  <div class="cs__list" role="listbox">
+                    <button
+                      type="button"
+                      class="cs__opt"
+                      role="option"
+                      data-value="Até 500k"
+                      aria-selected="true"
+                    >
+                      Até R$ 500 mil
+                    </button>
+                    <button
+                      type="button"
+                      class="cs__opt"
+                      role="option"
+                      data-value="500k-1M"
+                      aria-selected="false"
+                    >
+                      R$ 500k a R$ 1M
+                    </button>
+                    <button
+                      type="button"
+                      class="cs__opt"
+                      role="option"
+                      data-value="1M-3M"
+                      aria-selected="false"
+                    >
+                      R$ 1M a R$ 3M
+                    </button>
+                    <button
+                      type="button"
+                      class="cs__opt"
+                      role="option"
+                      data-value="+3M"
+                      aria-selected="false"
+                    >
+                      Acima de R$ 3M
+                    </button>
+                  </div>
+                </div>
 
                 <button class="btn btn--cta" type="submit">Buscar agora</button>
               </div>
@@ -222,8 +357,8 @@
               Uma experiência premium, do começo ao fim.
             </h2>
             <p class="muted">
-              Consultoria personalizada, negociação e suporte jurídico para você comprar com
-              tranquilidade.
+              Consultoria personalizada, negociação e suporte jurídico para você
+              comprar com tranquilidade.
             </p>
           </div>
 
@@ -394,11 +529,13 @@
                   >Quer receber imóveis no seu perfil?</b
                 >
                 <p class="muted">
-                  Enviamos uma consultoria personalizada personalizada com 3 opções reais em até
-                  24h.
+                  Enviamos uma consultoria personalizada personalizada com 3
+                  opções reais em até 24h.
                 </p>
               </div>
-              <a class="btn btn--cta" href="contato.html">Pedir oportunidades exclusivas</a>
+              <a class="btn btn--cta" href="contato.html"
+                >Pedir oportunidades exclusivas</a
+              >
             </div>
           </div>
         </div>
@@ -425,14 +562,7 @@
 
             <div class="media reveal hover-lift">
               <!-- Troque o src por seu vídeo do YouTube/Vimeo -->
-              <iframe
-                src="https://www.youtube.com/embed/ScMzIvxBSi4"
-                title="Vídeo / Tour"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              >
-              </iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/87-vHCP4biI?si=9UuUBjbq1Y8GRkfH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
         </div>
