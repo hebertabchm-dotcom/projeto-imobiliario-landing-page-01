@@ -3,10 +3,56 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="LuxPrime — Imóveis exclusivos com curadoria premium, atendimento consultivo e suporte completo do primeiro contato ao fechamento. Agende visita ou peça curadoria personalizada."
+    />
     <title>LuxPrime Imóveis — Exclusivos para clientes exigentes</title>
     <link rel="stylesheet" href="styles.css" />
+    <!-- Open Graph / Twitter -->
+    <meta
+      property="og:title"
+      content="LuxPrime Imóveis — Exclusivos para clientes exigentes"
+    />
+    <meta
+      property="og:description"
+      content="Imóveis exclusivos com curadoria premium, atendimento consultivo e tours virtuais. Peça curadoria ou agende visita."
+    />
+    <meta property="og:image" content="assets/img/cobertura-1400.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="LuxPrime Imóveis — Exclusivos para clientes exigentes"
+    />
+    <meta
+      name="twitter:description"
+      content="Imóveis exclusivos com curadoria premium, atendimento consultivo e tours virtuais."
+    />
+    <meta name="twitter:image" content="assets/img/cobertura-1400.jpg" />
+
+    <!-- JSON-LD (Organization + WebSite) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": "LuxPrime",
+        "url": "https://example.com/",
+        "logo": "https://example.com/assets/img/cobertura-1400.jpg",
+        "description": "Imóveis exclusivos com curadoria premium e atendimento consultivo.",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+55-21-0000-0000",
+            "contactType": "customer service",
+            "areaServed": "BR"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#mainContent">Pular para o conteúdo</a>
     <header class="header">
       <div class="container">
         <div class="nav">
@@ -39,7 +85,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="mainContent">
       <!-- HERO -->
       <section class="hero">
         <div class="hero__bg" aria-hidden="true"></div>

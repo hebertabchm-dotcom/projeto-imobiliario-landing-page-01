@@ -1,0 +1,15 @@
+{
+  "name": "luxprime-landing-audit",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "audit:axe": "node scripts/axe-audit.js"
+  },
+  "dependencies": {
+    "axe-core": "^4.8.0",
+    "jsdom": "^22.1.0"
+  },
+  "devDependencies": {
+    "lighthouse": "^13.0.1"
+  }
+}
