@@ -398,6 +398,51 @@ select:focus {
   transform: translateY(-2px);
 }
 
+/* Utility classes added to remove inline styles and improve validation */
+.mt-10 {
+  margin-top: 10px;
+}
+.mt-12 {
+  margin-top: 12px;
+}
+.mt-14 {
+  margin-top: 14px;
+}
+.mt-18 {
+  margin-top: 18px;
+}
+.mt-22 {
+  margin-top: 22px;
+}
+
+.action-row {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.underline {
+  text-decoration: underline;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.ctaBand__title {
+  font-size: 1.05rem;
+}
+
+/* Delay utility for reveal animations */
+.delay-1 {
+  --i: 1;
+}
+.delay-2 {
+  --i: 2;
+}
+
 .section--light .btn--cta {
   background: linear-gradient(90deg, var(--warm100), var(--warm200));
   color: #1b140f;

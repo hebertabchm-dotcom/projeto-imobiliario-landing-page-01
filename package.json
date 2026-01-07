@@ -10,6 +10,7 @@
     "jsdom": "^22.1.0"
   },
   "devDependencies": {
+    "html-validate": "^10.5.0",
     "lighthouse": "^13.0.1",
     "puppeteer": "^24.34.0"
   }

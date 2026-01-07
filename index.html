@@ -70,7 +70,12 @@
 
           <div class="nav__right">
             <a class="btn btn--cta" href="contato.html">Agendar visita</a>
-            <button class="burger" id="burger" aria-label="Abrir menu">
+            <button
+              class="burger"
+              id="burger"
+              type="button"
+              aria-label="Abrir menu"
+            >
               <span></span><span></span><span></span>
             </button>
           </div>
@@ -120,7 +125,7 @@
           </div>
 
           <!-- Painel de busca -->
-          <aside class="card hero__panel hover-lift reveal" style="--i: 1">
+          <aside class="card hero__panel hover-lift reveal delay-1">
             <h3>Encontre seu imóvel ideal</h3>
             <form id="heroSearchForm">
               <div class="formRow">
@@ -134,11 +139,12 @@
                 </div>
                 <input
                   class="input"
+                  type="search"
                   name="bairro"
                   placeholder="Bairro / Região"
                 />
               </div>
-              <div class="formRow" style="margin-top: 10px">
+              <div class="formRow mt-10">
                 <div class="select-wrapper">
                   <select name="faixa" aria-label="Faixa de valor">
                     <option value="Até 500k">Até R$ 500 mil</option>
@@ -150,11 +156,9 @@
                 <button class="btn btn--cta" type="submit">Buscar agora</button>
               </div>
             </form>
-            <p class="muted" style="margin: 12px 0 0">
+            <p class="muted mt-12">
               Preferir atendimento direto?
-              <a href="contato.html" style="text-decoration: underline"
-                >Fale conosco</a
-              >.
+              <a href="contato.html" class="underline">Fale conosco</a>.
             </p>
           </aside>
         </div>
@@ -174,7 +178,7 @@
             </p>
           </div>
 
-          <div class="grid3" style="margin-top: 18px">
+          <div class="grid3 mt-18">
             <article class="card feature hover-lift reveal">
               <div class="badge">🔎 Curadoria</div>
               <h3>Imóveis realmente selecionados</h3>
@@ -182,31 +186,31 @@
                 Somente opções com padrão de qualidade, localização estratégica
                 e potencial de valorização.
               </p>
-              <div style="margin-top: 12px">
+              <div class="mt-12">
                 <a class="btn" href="imoveis.html">Explorar catálogo</a>
               </div>
             </article>
 
-            <article class="card feature hover-lift reveal" style="--i: 1">
+            <article class="card feature hover-lift reveal delay-1">
               <div class="badge">🧭 Consultoria</div>
               <h3>Atendimento consultivo</h3>
               <p>
                 Entendemos seu objetivo, perfil e prazo para recomendar as
                 melhores oportunidades.
               </p>
-              <div style="margin-top: 12px">
+              <div class="mt-12">
                 <a class="btn" href="contato.html">Quero falar agora</a>
               </div>
             </article>
 
-            <article class="card feature hover-lift reveal" style="--i: 2">
+            <article class="card feature hover-lift reveal delay-2">
               <div class="badge">🛡️ Segurança</div>
               <h3>Suporte e negociação</h3>
               <p>
                 Da proposta ao fechamento: documentação, visitas, condições e
                 acompanhamento completo.
               </p>
-              <div style="margin-top: 12px">
+              <div class="mt-12">
                 <a class="btn" href="sobre.html">Conhecer o processo</a>
               </div>
             </article>
@@ -226,7 +230,7 @@
             </p>
           </div>
 
-          <div class="grid3" style="margin-top: 18px">
+          <div class="grid3 mt-18">
             <article class="card listing hover-lift reveal">
               <picture class="listing__img">
                 <source
@@ -256,21 +260,14 @@
                 <div class="meta">
                   📍 Barra da Tijuca • 🛏️ 3 suítes • 📐 220m²
                 </div>
-                <div
-                  style="
-                    margin-top: 12px;
-                    display: flex;
-                    gap: 10px;
-                    flex-wrap: wrap;
-                  "
-                >
+                <div class="action-row">
                   <a class="btn btn--cta" href="contato.html">Agendar visita</a>
                   <a class="btn" href="imoveis.html#lista">Ver mais</a>
                 </div>
               </div>
             </article>
 
-            <article class="card listing hover-lift reveal" style="--i: 1">
+            <article class="card listing hover-lift reveal delay-1">
               <picture class="listing__img">
                 <source
                   type="image/webp"
@@ -297,14 +294,7 @@
                 <span class="badge">Apartamento • Reformado</span>
                 <div class="price">R$ 980.000</div>
                 <div class="meta">📍 Botafogo • 🛏️ 2 quartos • 📐 86m²</div>
-                <div
-                  style="
-                    margin-top: 12px;
-                    display: flex;
-                    gap: 10px;
-                    flex-wrap: wrap;
-                  "
-                >
+                <div class="action-row">
                   <a class="btn btn--cta" href="contato.html"
                     >Solicitar detalhes</a
                   >
@@ -313,7 +303,7 @@
               </div>
             </article>
 
-            <article class="card listing hover-lift reveal" style="--i: 2">
+            <article class="card listing hover-lift reveal delay-2">
               <picture class="listing__img">
                 <source
                   type="image/webp"
@@ -340,14 +330,7 @@
                 <span class="badge">Casa • Condomínio</span>
                 <div class="price">R$ 3.790.000</div>
                 <div class="meta">📍 Recreio • 🛏️ 4 suítes • 📐 340m²</div>
-                <div
-                  style="
-                    margin-top: 12px;
-                    display: flex;
-                    gap: 10px;
-                    flex-wrap: wrap;
-                  "
-                >
+                <div class="action-row">
                   <a class="btn btn--cta" href="contato.html">Agendar tour</a>
                   <a class="btn" href="imoveis.html#lista">Ver mais</a>
                 </div>
@@ -355,10 +338,10 @@
             </article>
           </div>
 
-          <div class="reveal" style="margin-top: 22px">
+          <div class="reveal mt-22">
             <div class="ctaBand card">
               <div>
-                <b style="font-size: 1.05rem"
+                <b class="ctaBand__title"
                   >Quer receber imóveis no seu perfil?</b
                 >
                 <p class="muted">
@@ -377,20 +360,13 @@
         <div class="container">
           <div class="grid2">
             <div class="reveal">
-              <div class="kicker">Tour & Experiência</div>
+              <div class="kicker">Tour &amp; Experiência</div>
               <h2 class="sectionTitle">Veja antes de visitar.</h2>
               <p class="muted">
                 Aqui você pode inserir um vídeo institucional, um tour 360°, ou
                 um vídeo de imóvel destaque.
               </p>
-              <div
-                style="
-                  margin-top: 14px;
-                  display: flex;
-                  gap: 10px;
-                  flex-wrap: wrap;
-                "
-              >
+              <div class="action-row mt-14">
                 <a class="btn btn--cta" href="contato.html"
                   >Quero um tour guiado</a
                 >
@@ -404,7 +380,6 @@
                 src="https://www.youtube.com/embed/ScMzIvxBSi4"
                 title="Vídeo / Tour"
                 loading="lazy"
-                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               >
@@ -416,15 +391,7 @@
     </main>
 
     <footer class="footer">
-      <div
-        class="container"
-        style="
-          display: flex;
-          justify-content: space-between;
-          gap: 16px;
-          flex-wrap: wrap;
-        "
-      >
+      <div class="container footer__container">
         <div>
           <b>LuxPrime</b>
           <div class="muted">Imóveis exclusivos • Atendimento consultivo</div>
