@@ -1,118 +1,168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sobre nós — LuxPrime</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sobre nós — LuxPrime</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="nav">
+          <a class="brand" href="index.html"
+            ><span class="brand__mark"></span><span>LuxPrime</span></a
+          >
 
-<header class="header">
-  <div class="container">
-    <div class="nav">
-      <a class="brand" href="index.html"><span class="brand__mark"></span><span>LuxPrime</span></a>
+          <nav class="menu">
+            <a data-nav href="index.html">Home</a>
+            <a data-nav href="imoveis.html">Imóveis</a>
+            <a data-nav href="sobre.html">Sobre nós</a>
+            <a data-nav href="contato.html">Fale Conosco</a>
+          </nav>
 
-      <nav class="menu">
-        <a data-nav href="index.html">Home</a>
-        <a data-nav href="imoveis.html">Imóveis</a>
-        <a data-nav href="sobre.html">Sobre nós</a>
-        <a data-nav href="contato.html">Fale Conosco</a>
-      </nav>
-
-      <div class="nav__right">
-        <a class="btn btn--cta" href="contato.html">Agendar visita</a>
-        <button class="burger" id="burger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-
-    <div class="mobilePanel" id="mobilePanel">
-      <a data-nav href="index.html">Home</a>
-      <a data-nav href="imoveis.html">Imóveis</a>
-      <a data-nav href="sobre.html">Sobre nós</a>
-      <a data-nav href="contato.html">Fale Conosco</a>
-    </div>
-  </div>
-</header>
-
-<main>
-  <section class="section">
-    <div class="container">
-      <div class="reveal">
-        <div class="kicker">Nossa história</div>
-        <h1 class="sectionTitle">Uma imobiliária boutique com foco em qualidade.</h1>
-        <p class="muted">
-          A LuxPrime nasceu para atender clientes que valorizam discrição, curadoria e segurança.
-          Nosso papel é simplificar decisões complexas — e transformar o processo em uma experiência premium.
-        </p>
-      </div>
-
-      <div class="grid2" style="margin-top:18px;">
-        <div class="card feature hover-lift reveal">
-          <h3>Missão</h3>
-          <p>Conectar pessoas a imóveis excepcionais com transparência, estratégia e atendimento humano.</p>
-        </div>
-        <div class="card feature hover-lift reveal" style="--i:1">
-          <h3>Valores</h3>
-          <p>Confiança, excelência, clareza na negociação e compromisso com o melhor resultado.</p>
-        </div>
-      </div>
-
-      <div class="grid2" style="margin-top:18px;">
-        <div class="reveal">
-          <h2 class="sectionTitle" style="margin-top:0;">Nosso processo</h2>
-          <p class="muted">Um fluxo simples e eficiente para você comprar com tranquilidade.</p>
-          <div class="grid2" style="margin-top:14px;">
-            <div class="card feature hover-lift">
-              <b>1) Diagnóstico</b>
-              <p>Entendemos seu perfil e objetivos (moradia, investimento, prazo e estilo).</p>
-            </div>
-            <div class="card feature hover-lift">
-              <b>2) Curadoria</b>
-              <p>Enviamos opções reais e alinhadas, com prós/contras e recomendações.</p>
-            </div>
-            <div class="card feature hover-lift">
-              <b>3) Visitas & Negociação</b>
-              <p>Agendamos, acompanhamos e negociamos buscando a melhor condição.</p>
-            </div>
-            <div class="card feature hover-lift">
-              <b>4) Fechamento Seguro</b>
-              <p>Suporte com documentação e acompanhamento até a entrega das chaves.</p>
-            </div>
-          </div>
-
-          <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn btn--cta" href="contato.html">Quero começar agora</a>
-            <a class="btn" href="imoveis.html">Ver imóveis</a>
+          <div class="nav__right">
+            <a class="btn btn--cta" href="contato.html">Agendar visita</a>
+            <button
+              type="button"
+              class="burger"
+              id="burger"
+              aria-label="Abrir menu"
+            >
+              <span></span><span></span><span></span>
+            </button>
           </div>
         </div>
 
-        <!-- Local de imagem institucional -->
-        <div class="card reveal hover-lift" style="overflow:hidden;">
-          <div style="
-            height: 420px;
-            background-image:url('https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=1600&q=80');
-            background-size:cover;
-            background-position:center;">
-          </div>
-          <div style="padding:14px;">
-            <b>Imagem institucional</b>
-            <div class="muted">Troque por foto da equipe, escritório ou atendimento.</div>
-          </div>
+        <div class="mobilePanel" id="mobilePanel">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="imoveis.html">Imóveis</a>
+          <a data-nav href="sobre.html">Sobre nós</a>
+          <a data-nav href="contato.html">Fale Conosco</a>
         </div>
       </div>
-    </div>
-  </section>
-</main>
+    </header>
 
-<footer class="footer">
-  <div class="container" style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;">
-    <div><b>LuxPrime</b><div class="muted">Boutique Real Estate</div></div>
-    <div class="muted">© <span id="year"></span> LuxPrime.</div>
-  </div>
-</footer>
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="reveal">
+            <div class="kicker">Nossa história</div>
+            <h1 class="sectionTitle">
+              Uma imobiliária boutique com foco em qualidade.
+            </h1>
+            <p class="muted">
+              A LuxPrime nasceu para atender clientes que valorizam discrição,
+              curadoria e segurança. Nosso papel é simplificar decisões
+              complexas — e transformar o processo em uma experiência premium.
+            </p>
+          </div>
 
-<script src="app.js"></script>
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-</body>
+          <div class="grid2" style="margin-top: 18px">
+            <div class="card feature hover-lift reveal">
+              <h3>Missão</h3>
+              <p>
+                Conectar pessoas a imóveis excepcionais com transparência,
+                estratégia e atendimento humano.
+              </p>
+            </div>
+            <div class="card feature hover-lift reveal" style="--i: 1">
+              <h3>Valores</h3>
+              <p>
+                Confiança, excelência, clareza na negociação e compromisso com o
+                melhor resultado.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid2" style="margin-top: 18px">
+            <div class="reveal">
+              <h2 class="sectionTitle" style="margin-top: 0">Nosso processo</h2>
+              <p class="muted">
+                Um fluxo simples e eficiente para você comprar com
+                tranquilidade.
+              </p>
+              <div class="grid2" style="margin-top: 14px">
+                <div class="card feature hover-lift">
+                  <b>1) Diagnóstico</b>
+                  <p>
+                    Entendemos seu perfil e objetivos (moradia, investimento,
+                    prazo e estilo).
+                  </p>
+                </div>
+                <div class="card feature hover-lift">
+                  <b>2) Curadoria</b>
+                  <p>
+                    Enviamos opções reais e alinhadas, com prós/contras e
+                    recomendações.
+                  </p>
+                </div>
+                <div class="card feature hover-lift">
+                  <b>3) Visitas & Negociação</b>
+                  <p>
+                    Agendamos, acompanhamos e negociamos buscando a melhor
+                    condição.
+                  </p>
+                </div>
+                <div class="card feature hover-lift">
+                  <b>4) Fechamento Seguro</b>
+                  <p>
+                    Suporte com documentação e acompanhamento até a entrega das
+                    chaves.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                style="
+                  margin-top: 16px;
+                  display: flex;
+                  gap: 10px;
+                  flex-wrap: wrap;
+                "
+              >
+                <a class="btn btn--cta" href="contato.html"
+                  >Quero começar agora</a
+                >
+                <a class="btn" href="imoveis.html">Ver imóveis</a>
+              </div>
+            </div>
+
+            <!-- Local de imagem institucional -->
+            <div class="card reveal hover-lift" style="overflow: hidden">
+              <div
+                style="
+                  height: 420px;
+                  background-image: url('https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=1600&q=80');
+                  background-size: cover;
+                  background-position: center;
+                "
+              ></div>
+              <div style="padding: 14px">
+                <b>Imagem institucional</b>
+                <div class="muted">
+                  Troque por foto da equipe, escritório ou atendimento.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div>
+          <b>LuxPrime</b>
+          <div class="muted">Boutique Real Estate</div>
+        </div>
+        <div class="muted">© <span id="year"></span> LuxPrime.</div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
