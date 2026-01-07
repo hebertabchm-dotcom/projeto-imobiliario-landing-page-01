@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap");
+
 /* =========================================================
    Luxury Real Estate UI (baseado na referência)
    ========================================================= */
@@ -38,6 +40,9 @@
   --easeOut: cubic-bezier(0.16, 1, 0.3, 1);
 
   --container: 1200px;
+
+  --font-body: "Manrope", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Playfair Display", "Times New Roman", serif;
 }
 
 * {
@@ -45,31 +50,32 @@
 }
 html,
 body {
-   padding-top: 80px;
   height: 100%;
 }
 body {
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Inter", "Segoe UI",
-    Roboto, Arial, sans-serif;
-  background: var(--bg);
+  font-family: var(--font-body);
+  background:
+    radial-gradient(900px 600px at 20% -10%, rgba(246, 210, 122, 0.16), transparent 55%),
+    radial-gradient(700px 520px at 85% 0%, rgba(199, 124, 44, 0.12), transparent 60%),
+    var(--bg);
   color: var(--text);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  padding-top: 5px;
+  padding-top: 80px;
 }
 
 @media (max-width: 768px) {
   body {
-    padding-top: 10px;
+    padding-top: 68px;
   }
 }
 
 main {
-   padding-top: 5px;
+   padding-top: 0px;
   overflow: hidden;
 }
 
@@ -99,6 +105,18 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+h1,
+h2,
+h3,
+.h1,
+.sectionTitle,
+.ctaBand__title,
+.brand {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -167,6 +185,8 @@ img {
   align-items: center;
   gap: 8px;
 
+  margin-bottom: 16px;
+  margin-right: 5px;
   padding: 8px 14px;
   border-radius: 999px;
 
@@ -206,11 +226,11 @@ img {
    Cards – glass mais sofisticado
 ========================================================= */
 .card {
-  background: rgba(255, 255, 255, 0.055);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--r18);
   box-shadow: var(--shadow1);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
 }
 
 .hover-lift {
@@ -232,7 +252,7 @@ img {
   right: 0;
 
   z-index: 999;
-  background: rgba(15, 17, 21, 0.85);
+  background: linear-gradient(180deg, rgba(11, 13, 18, 0.96), rgba(11, 13, 18, 0.82));
   backdrop-filter: blur(12px);
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -552,8 +572,8 @@ select:focus {
 
 /* ---------------- Sections ---------------- */
 .section { padding: 72px 0; }
-.section--light { background: #fff; color: #111; }
-.section--light .card { background: #fff; border-color: rgba(0, 0, 0, 0.08); }
+.section--light { background: linear-gradient(180deg, #fffdf6, #f6efe2); color: #141414; }
+.section--light .card { background: #fffaf0; border-color: rgba(0, 0, 0, 0.08); box-shadow: 0 16px 40px rgba(17, 12, 8, 0.12); }
 .section--light .muted { color: rgba(0, 0, 0, 0.65); }
 
 .kicker {
@@ -567,7 +587,9 @@ select:focus {
   font-size: clamp(1.6rem, 2.6vw, 2.5rem);
   line-height: 1.2;
 }
-.muted { color: var(--muted); }
+.muted { 
+  font-size: 0.95rem;
+  color: var(--muted); }
 
 .grid3 {
   display: grid;
@@ -914,6 +936,15 @@ select:focus {
 .reveal.is-visible {
   animation: fadeUp var(--dur3) var(--easeOut) both;
 }
+
+
+.ctaBand.card {
+  background-color: var(--text);
+  color: var(--bg);
+  animation: fadeUp var(--dur3) var(--easeOut) both;
+  animation-delay: calc(var(--i, 0) * 120ms);
+}
+
 
 /* ---------------- Responsive ---------------- */
 @media (max-width: 980px) {
@@ -1736,4 +1767,370 @@ select:focus {
 }
 .footer__bottom .desenvolvedor:hover{
   color: var(--warm100);
+}
+
+/* =========================================
+   PATCH — CTA band alinhado + mobile bonito
+   (corrige botão desalinhado e texto feio)
+========================================= */
+
+.ctaBand{
+  display: flex;
+  align-items: center;            /* alinha texto e botão no mesmo eixo */
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.ctaBand > div{
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.ctaBand__title{
+  margin: 0 0 6px;
+  line-height: 1.15;
+}
+
+.ctaBand p{
+  margin: 0;
+  line-height: 1.55;              /* texto mais elegante */
+}
+
+/* botão fica centrado, sem “subir” */
+.ctaBand .btn{
+  align-self: center;
+  white-space: nowrap;
+}
+
+/* Mobile: stack alinhado, texto mais bonito */
+@media (max-width: 600px){
+  .ctaBand{
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    gap: 12px;
+  }
+
+  .ctaBand .btn{
+    width: 100%;
+    justify-content: center;
+    white-space: normal;          /* quebra elegante se precisar */
+  }
+
+  .ctaBand__title{
+    font-size: 1.05rem;
+  }
+
+  .ctaBand p{
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+}
+
+/* =========================================
+   Atendimento AI + CTA Band (LuxPrime)
+   Estrutura (HTML):
+   .ctaBand.card
+     img.atedimento-ai
+     div (texto)
+     a.btn.btn--cta
+========================================= */
+
+/* --- 1) Imagem: estilo premium, sem forçar centralização --- */
+.ctaBand .atedimento-ai{
+  display: block;
+  width: 75%;
+  max-width: 340px;
+  height: auto;
+
+  border-radius: 18px;
+  object-fit: cover;
+
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.40);
+  background: rgba(255,255,255,0.02);
+}
+
+/* Se estiver em fundo claro */
+.section--light .ctaBand .atedimento-ai{
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: 0 16px 44px rgba(0,0,0,0.12);
+  background: var(--warm100);
+}
+
+/* --- 2) Layout PC/Tablet: imagem esquerda | texto+botão direita --- */
+.ctaBand{
+  display: grid;
+  grid-template-columns: clamp(240px, 28vw, 360px) 1fr;
+  grid-template-rows: auto auto;
+  column-gap: clamp(40px, 4vw, 56px);
+  row-gap: 14px;
+  align-items: center;
+}
+
+/* imagem ocupa as 2 linhas na esquerda */
+.ctaBand .atedimento-ai{
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+/* bloco de texto na direita */
+.ctaBand > div{
+  grid-column: 2;
+  grid-row: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+
+  text-align: left;
+  max-width: 600px;
+}
+
+ #lista + .reveal .ctaBand.card {
+background-color: #1b140f;
+}
+
+
+.ctaBand__title{
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  line-height: 1.2;
+}
+
+.ctaBand > div p{
+  margin: 0;
+  line-height: 1.65;
+  max-width: 62ch;
+}
+
+/* botão abaixo do texto (alinhado à esquerda) */
+.ctaBand > .btn{
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: start;
+  margin-top: 25px;
+
+  width: fit-content; /* não estica no desktop */
+}
+
+/* --- 3) Mobile: empilha e deixa legível --- */
+@media (max-width: 768px){
+  .ctaBand{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    row-gap: 16px;
+    text-align: center;
+  }
+
+  .ctaBand .atedimento-ai{
+    grid-column: 1;
+    grid-row: 1;
+
+    max-width: 280px;
+    margin-inline: auto;
+    border-radius: 16px;
+  }
+
+  .ctaBand > div{
+    grid-column: 1;
+    grid-row: 2;
+
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .ctaBand > div p{
+    max-width: 46ch;
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .ctaBand > .btn{
+    grid-column: 1;
+    grid-row: 3;
+
+    justify-self: center;
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* =========================================
+   HEADER / LOGO — AJUSTE MOBILE (LuxPrime)
+========================================= */
+
+@media (max-width: 600px){
+
+  /* Header mais compacto */
+  .header{
+    padding: 0;
+  }
+
+  .nav{
+    padding: 8px 0;
+    gap: 8px;
+  }
+
+  /* Marca (logo + nome) */
+  .brand{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Ícone da marca */
+  .brand__mark{
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    border-radius: 50%;
+  }
+
+  .brand__mark img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Texto LuxPrime */
+  .brand span{
+    font-size: 1.05rem;   /* reduz para caber */
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.2px;
+    white-space: nowrap;  /* evita quebrar linha */
+  }
+
+  /* Botão CTA do header (se existir) */
+  .nav__right .btn{
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* CTA band simple variant */
+.ctaBand--simple {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 26px;
+  background:
+    radial-gradient(420px 140px at 10% 0%, rgba(246,210,122,0.16), transparent 70%),
+    linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+  border: 1px solid rgba(246,210,122,0.18);
+  overflow: hidden;
+}
+
+.ctaBand--simple::after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  top: -40px;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(234,166,74,0.18), transparent 65%);
+  filter: blur(6px);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.ctaBand--simple .ctaBand__content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+}
+
+.ctaBand--simple .ctaBand__title {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.ctaBand__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--warm100);
+  background: rgba(246,210,122,0.12);
+  border: 1px solid rgba(246,210,122,0.22);
+}
+
+.ctaBand__meta {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  font-size: 0.86rem;
+  color: var(--textSoft);
+}
+
+.ctaBand__meta span {
+  position: relative;
+}
+
+.ctaBand__meta span + span::before {
+  content: "|";
+  position: absolute;
+  left: -10px;
+  color: rgba(255,255,255,0.45);
+}
+
+.ctaBand--simple .btn {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .ctaBand--simple {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .ctaBand--simple .btn {
+    width: 100%;
+    white-space: normal;
+  }
+
+  .ctaBand--simple .ctaBand__content {
+    max-width: 100%;
+  }
+}
+
+/* CTA band contact colors */
+.ctaBand--contact {
+  background:
+    radial-gradient(420px 140px at 10% 0%, rgba(246,210,122,0.16), transparent 70%),
+    linear-gradient(180deg, rgba(27,20,15,0.98), rgba(27,20,15,0.88));
+  border: 1px solid rgba(246,210,122,0.20);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ctaBand--contact .ctaBand__title {
+  color: #ffffff;
+}
+
+.ctaBand--contact .muted {
+  color: var(--textSoft);
+}
+
+
+.ctaBand--contact > div {
+  text-align: center;
+}
+
+.ctaBand--contact .btn {
+  align-self: center;
 }
